@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bài tập tạo giao diện form đăng ký người dùng - CodeGym Module 1">
+    <title>Đăng ký người dùng | CodeGym Form</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --primary-light: #eff6ff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border-color: #cbd5e1;
+            --border-focus: #3b82f6;
+            --bg-surface: #ffffff;
+            --bg-app: #f1f5f9;
+            --danger: #ef4444;
+            --radius-lg: 16px;
+            --radius-md: 10px;
+            --shadow-card: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+            --shadow-input: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #e2e8f0 0%, #f8fafc 50%, #e0e7ff 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 16px;
+            color: var(--text-main);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            background: var(--bg-surface);
+            border-radius: var(--radius-lg);
+            padding: 36px 32px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #2563eb, #6366f1, #38bdf8);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .form-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .form-header p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 8px;
+        }
+
+        .required {
+            color: var(--danger);
+            margin-left: 2px;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 14px;
+            color: var(--text-main);
+            background-color: #fff;
+            border: 1.5px solid var(--border-color);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-input);
+            transition: all 0.2s ease;
+            outline: none;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus {
+            border-color: var(--border-focus);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+        }
+
+        input::placeholder {
+            color: #94a3b8;
+        }
+
+        /* Radio buttons styling */
+        .gender-options {
+            display: flex;
+            gap: 16px;
+            padding: 6px 0;
+        }
+
+        .radio-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-main);
+            padding: 8px 16px;
+            border-radius: var(--radius-md);
+            border: 1.5px solid var(--border-color);
+            transition: all 0.2s ease;
+            user-select: none;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .radio-label:hover {
+            border-color: #94a3b8;
+            background-color: #f8fafc;
+        }
+
+        .radio-label input[type="radio"] {
+            accent-color: var(--primary);
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            margin: 0;
+        }
+
+        .radio-label:has(input[type="radio"]:checked) {
+            border-color: var(--primary);
+            background-color: var(--primary-light);
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Button group */
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 13px 20px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #1d4ed8, #1e40af);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background-color: #f1f5f9;
+            color: #475569;
+            border: 1px solid #e2e8f0;
+        }
+
+        .btn-secondary:hover {
+            background-color: #e2e8f0;
+            color: #1e293b;
+        }
+
+        .note-card {
+            margin-top: 24px;
+            padding: 12px 14px;
+            background-color: #f8fafc;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--primary);
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .note-card strong {
+            color: var(--text-main);
+        }
+
+        .note-card code {
+            background-color: #e2e8f0;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-size: 11px;
+            color: #0f172a;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 24px 20px;
+            }
+            .gender-options {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .button-group {
+                flex-direction: column-reverse;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <header class="form-header">
+            <span class="badge">CodeGym Exercise</span>
+            <h1>Đăng Ký Người Dùng</h1>
+            <p>Vui lòng điền đầy đủ các thông tin cần thiết bên dưới để đăng ký tài khoản mới</p>
+        </header>
+
+        <!-- Form gửi dữ liệu tới server demo CodeGym bằng phương thức POST theo yêu cầu bài học -->
+        <form id="register-form" action="http://demo.codegym.vn/6/registration_form/register.php" method="POST">
+            
+            <!-- Trường Họ và tên: name="name" -->
+            <div class="form-group">
+                <label for="name">Họ và tên <span class="required">*</span></label>
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder="Nhập họ và tên đầy đủ..." 
+                        required 
+                        autocomplete="name"
+                    >
+                </div>
+            </div>
+
+            <!-- Trường Email: name="email" -->
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <div class="input-wrapper">
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="example@codegym.vn" 
+                        required 
+                        autocomplete="email"
+                    >
+                </div>
+            </div>
+
+            <!-- Trường Số điện thoại: name="phone" -->
+            <div class="form-group">
+                <label for="phone">Số điện thoại <span class="required">*</span></label>
+                <div class="input-wrapper">
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        placeholder="Nhập số điện thoại (ví dụ: 0912345678)" 
+                        pattern="[0-9]{9,11}" 
+                        title="Vui lòng nhập số điện thoại hợp lệ (9 đến 11 chữ số)"
+                        required 
+                        autocomplete="tel"
+                    >
+                </div>
+            </div>
+
+            <!-- Trường Giới tính: name="gender" -->
+            <div class="form-group">
+                <label>Giới tính <span class="required">*</span></label>
+                <div class="gender-options">
+                    <label class="radio-label" for="gender-male">
+                        <input type="radio" id="gender-male" name="gender" value="male" checked>
+                        <span>Nam</span>
+                    </label>
+                    <label class="radio-label" for="gender-female">
+                        <input type="radio" id="gender-female" name="gender" value="female">
+                        <span>Nữ</span>
+                    </label>
+                    <label class="radio-label" for="gender-other">
+                        <input type="radio" id="gender-other" name="gender" value="other">
+                        <span>Khác</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Nút gửi & làm mới -->
+            <div class="button-group">
+                <input type="reset" value="Làm mới" class="btn btn-secondary" id="btn-reset">
+                <input type="submit" value="Đăng ký" class="btn btn-primary" id="btn-submit">
+            </div>
+
+            <!-- Thông tin cấu hình kỹ thuật theo đề bài -->
+            <div class="note-card">
+                <strong>Thông tin cấu hình:</strong><br>
+                • <code>action="http://demo.codegym.vn/6/registration_form/register.php"</code><br>
+                • <code>method="POST"</code><br>
+                • Fields: <code>name</code>, <code>email</code>, <code>phone</code>, <code>gender</code>
+            </div>
+        </form>
+    </main>
+
+</body>
+</html>

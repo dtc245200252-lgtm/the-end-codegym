@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục với Mô hình hộp CSS (CSS Box Model)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Bố cục với Mô hình hộp CSS (Box Model)</h1>
+        <p>So sánh sự khác biệt giữa <code>content-box</code> và <code>border-box</code></p>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <h3>Thẻ 1 (content-box)</h3>
+            <p>Kích thước nội dung cố định 280x150px. Padding và Border được cộng thêm vào ngoài.</p>
+        </div>
+
+        <div class="card">
+            <h3>Thẻ 2 (border-box)</h3>
+            <p>Tổng kích thước bao gồm cả Border và Padding luôn cố định là 280x150px.</p>
+        </div>
+
+        <div class="card">
+            <h3>Thẻ 3 (border-box)</h3>
+            <p>Tổng kích thước cố định 280x150px, nội dung bên trong co lại theo Padding.</p>
+        </div>
+    </main>
+</body>
+</html>

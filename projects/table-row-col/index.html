@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch họp công ty</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #1e293b;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            background: #ffffff;
+            max-width: 920px;
+            width: 100%;
+            padding: 35px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            color: #1d4ed8;
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 14px 18px;
+            text-align: left;
+            font-size: 15px;
+        }
+
+        th {
+            background: linear-gradient(135deg, #1e40af, #2563eb);
+            color: #ffffff;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        .day-cell {
+            background-color: #f8fafc;
+            font-weight: 600;
+            color: #0f172a;
+            text-align: center;
+            vertical-align: middle;
+            width: 22%;
+        }
+
+        .day-sub {
+            display: block;
+            font-size: 13px;
+            font-weight: normal;
+            color: #64748b;
+            margin-top: 4px;
+        }
+
+        .time-cell {
+            text-align: center;
+            font-weight: 500;
+            color: #334155;
+            width: 20%;
+            white-space: nowrap;
+        }
+
+        .content-cell {
+            color: #334155;
+            line-height: 1.5;
+        }
+
+        .long-meeting {
+            background-color: #fef3c7;
+            color: #92400e;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+
+        .badge-primary {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+
+        tbody tr:hover:not(:has(.long-meeting)) {
+            background-color: #f1f5f9;
+            transition: background-color 0.2s ease;
+        }
+
+        .note {
+            margin-top: 22px;
+            font-size: 14px;
+            color: #64748b;
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Tiêu đề h1 theo yêu cầu -->
+        <h1>Lịch họp công ty</h1>
+
+        <!-- Bảng hiển thị lịch họp gồm các cột Ngày, Giờ, Nội dung cuộc họp -->
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Ngày</th>
+                    <th>Giờ</th>
+                    <th>Nội dung cuộc họp</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Thứ Hai: 2 cuộc họp -> sử dụng rowspan="2" ở cột Ngày -->
+                <tr>
+                    <td class="day-cell" rowspan="2">
+                        Thứ Hai
+                        <span class="day-sub">(14/10/2026)</span>
+                    </td>
+                    <td class="time-cell">08:00 - 09:30</td>
+                    <td class="content-cell">
+                        <span class="badge badge-primary">Toàn công ty</span>
+                        Họp giao ban đầu tuần, đánh giá KPI và triển khai kế hoạch mới
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-cell">14:00 - 16:00</td>
+                    <td class="content-cell">
+                        <span class="badge badge-primary">Kinh doanh</span>
+                        Họp triển khai chiến dịch quảng bá sản phẩm quý IV
+                    </td>
+                </tr>
+
+                <!-- Thứ Ba: 2 cuộc họp -> sử dụng rowspan="2" ở cột Ngày -->
+                <tr>
+                    <td class="day-cell" rowspan="2">
+                        Thứ Ba
+                        <span class="day-sub">(15/10/2026)</span>
+                    </td>
+                    <td class="time-cell">09:00 - 11:30</td>
+                    <td class="content-cell">
+                        <span class="badge badge-primary">Kỹ thuật</span>
+                        Rà soát kiến trúc hệ thống và quy trình kiểm thử phần mềm
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-cell">15:00 - 16:30</td>
+                    <td class="content-cell">
+                        <span class="badge badge-primary">Nhân sự</span>
+                        Phỏng vấn và đánh giá ứng viên cấp quản lý
+                    </td>
+                </tr>
+
+                <!-- Thứ Tư: Cuộc họp kéo dài nhiều giờ (cả ngày) -> sử dụng colspan="2" để gộp ô Giờ và Nội dung -->
+                <tr>
+                    <td class="day-cell">
+                        Thứ Tư
+                        <span class="day-sub">(16/10/2026)</span>
+                    </td>
+                    <td class="long-meeting" colspan="2">
+                        🌟 <strong>Hội nghị Khách hàng & Đại hội đồng Cổ đông thường niên</strong><br>
+                        <span style="font-size: 14px; font-weight: normal;">(Cuộc họp kéo dài nhiều giờ: 08:00 - 17:00 - Bao gồm tiệc trà và lễ ký kết hợp tác)</span>
+                    </td>
+                </tr>
+
+                <!-- Thứ Năm: 2 cuộc họp -> sử dụng rowspan="2" ở cột Ngày -->
+                <tr>
+                    <td class="day-cell" rowspan="2">
+                        Thứ Năm
+                        <span class="day-sub">(17/10/2026)</span>
+                    </td>
+                    <td class="time-cell">08:30 - 10:30</td>
+                    <td class="content-cell">
+                        <span class="badge badge-primary">Ban Giám đốc</span>
+                        Họp tổng kết tài chính và kiểm toán ngân sách quý
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time-cell">14:00 - 16:00</td>
+                    <td class="content-cell">
+                        <span class="badge badge-primary">Marketing & CSKH</span>
+                        Đánh giá phản hồi khách hàng và cải tiến chất lượng dịch vụ
+                    </td>
+                </tr>
+
+                <!-- Thứ Sáu: Có 2 sự kiện trong ngày (rowspan="2"), trong đó buổi chiều kéo dài nhiều giờ (colspan="2") -->
+                <tr>
+                    <td class="day-cell" rowspan="2">
+                        Thứ Sáu
+                        <span class="day-sub">(18/10/2026)</span>
+                    </td>
+                    <td class="time-cell">09:00 - 10:30</td>
+                    <td class="content-cell">
+                        <span class="badge badge-primary">Trưởng phòng</span>
+                        Họp rà soát tiến độ tuần và bàn giao công việc
+                    </td>
+                </tr>
+                <tr>
+                    <td class="long-meeting" colspan="2">
+                        🎯 <strong>Chương trình Tập huấn Chiến lược & Đổi mới Sáng tạo</strong><br>
+                        <span style="font-size: 14px; font-weight: normal;">(Kéo dài liên tục nhiều giờ từ 13:30 - 18:00 - Toàn thể nhân viên tham gia)</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="note">
+            * Bảng ứng dụng thuộc tính <strong>rowspan</strong> để gộp các ô trong cột Ngày khi có nhiều cuộc họp trong ngày, và <strong>colspan</strong> để gộp ô khi cuộc họp kéo dài nhiều giờ.
+        </p>
+    </div>
+</body>
+</html>

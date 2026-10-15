@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Sử dụng Box Model 2 - Open Source Records</title>
+    <style type="text/css">
+      /* 1. CSS Reset */
+      html, body, h1, h2, h3, h4, ul, ol, li, p, a {
+        padding: 0;
+        border: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      /* 2. Cấu trúc trang (Body Box Model) */
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #333333;
+        background-color: #f7f9fa;
+        max-width: 720px;
+        margin: 30px auto;
+        padding: 30px 40px;
+        background: #ffffff;
+        border: 1px solid #e1e4e8;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      /* 3. Tiêu đề chính h1 */
+      h1 {
+        font-size: 32px;
+        color: #1a1a1a;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+        border-bottom: 3px solid #222222;
+      }
+
+      /* 4. Menu điều hướng (Navigation Bar) */
+      body > ul:first-of-type {
+        list-style: none;
+        margin-bottom: 24px;
+        padding: 10px 14px;
+        background-color: #f1f3f5;
+        border: 1px solid #dcdfe3;
+        border-radius: 6px;
+      }
+
+      body > ul:first-of-type li {
+        display: inline-block;
+        margin-right: 18px;
+      }
+
+      body > ul:first-of-type li a {
+        font-weight: bold;
+        text-decoration: none;
+        padding: 4px 8px;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+      }
+
+      body > ul:first-of-type li a:hover {
+        background-color: #e2e6ea;
+      }
+
+      /* 5. Tiêu đề phần h2, h3 */
+      h2 {
+        font-size: 22px;
+        color: #000000;
+        margin-top: 24px;
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+        border-bottom: 2px solid #eaeaea;
+      }
+
+      h3 {
+        font-size: 16px;
+        color: #333333;
+        margin-top: 16px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* 6. Đoạn văn và liên kết */
+      p {
+        color: #444444;
+        margin-bottom: 12px;
+      }
+
+      a {
+        color: #440000;
+        text-decoration: underline;
+      }
+
+      a:hover {
+        color: #880000;
+      }
+
+      /* 7. Danh sách thành viên (Members List) */
+      ul {
+        list-style-type: square;
+        margin-left: 24px;
+        margin-bottom: 16px;
+      }
+
+      li {
+        margin-bottom: 6px;
+        color: #444444;
+      }
+
+      /* 8. Lịch diễn Tour Dates */
+      ul:last-of-type {
+        list-style: none;
+        margin-left: 0;
+        margin-top: 14px;
+      }
+
+      ul:last-of-type li {
+        background-color: #fafbfc;
+        border: 1px solid #e1e4e8;
+        border-left: 4px solid #440000;
+        border-radius: 4px;
+        padding: 12px 16px;
+        margin-bottom: 12px;
+      }
+
+      ul:last-of-type li p {
+        margin-bottom: 4px;
+      }
+
+      ul:last-of-type li p:first-child {
+        font-weight: bold;
+        color: #222222;
+      }
+
+      ul:last-of-type li p:last-child {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Open Source Records</h1>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="bands.html">Bands</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <h2>Regular Expressions</h2>
+    
+    <h3>Bio</h3>
+    <p>Regular Expressionists are a hip-hop trio from New York City.</p>
+
+    <h3>Members</h3>
+    <ul>
+      <li>Rekt - Vocals</li>
+      <li>Face-like - Vocals</li>
+      <li>DJ Regex Capture - Decks</li>
+    </ul>
+
+    <h3>Albums</h3>
+    <p>This group has no albums released, but they are recording one album right now.</p>
+
+    <h2>Tour Dates</h2>
+    <ul>
+      <li>
+        <p>July 16th, 2014 @ 7:00pm</p>
+        <p><a href="http://hob.com">House of Blues</a> - Orlando, FL</p>
+      </li>
+      <li>
+        <p>July 17th, 2014 @ 7:30pm</p>
+        <p>Jannus Landing - Tampa, FL</p>
+      </li>
+      <li>
+        <p>July 19th, 2014 @ 8:00pm</p>
+        <p>The Tabernacle - Atlanta, GA</p>
+      </li>
+      <li>
+        <p>July 20th, 2014 @ 7:30pm</p>
+        <p>40 Watt Club - Athens, GA</p>
+      </li>
+    </ul>
+  </body>
+</html>

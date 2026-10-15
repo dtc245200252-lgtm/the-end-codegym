@@ -1,0 +1,142 @@
+/* ===================================================
+   1. BỘ CHỌN PHẦN TỬ (Element Selector)
+   Đổi màu nền của toàn trang web và cài đặt font chữ
+   =================================================== */
+body {
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* ===================================================
+   2. BỘ CHỌN LỚP (Class Selector)
+   Định dạng khung chứa chính của trang
+   =================================================== */
+.container {
+    background-color: #ffffff;
+    max-width: 650px;
+    width: 100%;
+    padding: 35px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4a5568;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+.sub-title {
+    font-size: 20px;
+    color: #2d3748;
+    margin-bottom: 15px;
+}
+
+/* ===================================================
+   3. BỘ CHỌN ĐỊNH DANH (ID Selector)
+   Căn giữa tiêu đề chính <h1> và định kiểu đặc biệt
+   =================================================== */
+#main-title {
+    text-align: center;
+    color: #1a365d;
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===================================================
+   4. BỘ CHỌN NHÓM (Grouping Selector)
+   Áp dụng định dạng chung cho nhiều phần tử cùng lúc
+   =================================================== */
+h1, h2, p {
+    font-weight: 600;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* ===================================================
+   5. BỘ CHỌN GIẢ LẬP (Pseudo-classes)
+   - Định dạng danh sách với màu sắc khác nhau (:nth-child)
+   - Sử dụng hover effect cho nút bấm (:hover, :active)
+   =================================================== */
+.hobby-list {
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+
+.hobby-item {
+    padding: 12px 18px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Các màu sắc khác nhau cho từng mục sở thích sử dụng pseudo-class :nth-child */
+.hobby-item:nth-child(1) {
+    background-color: #e6fffa;
+    color: #234e52;
+    border-left: 5px solid #319795;
+}
+
+.hobby-item:nth-child(2) {
+    background-color: #ebf8ff;
+    color: #2a4365;
+    border-left: 5px solid #3182ce;
+}
+
+.hobby-item:nth-child(3) {
+    background-color: #faf5ff;
+    color: #44337a;
+    border-left: 5px solid #805ad5;
+}
+
+.hobby-item:hover {
+    transform: translateX(6px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.action-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Định dạng nút bấm */
+#btn-click {
+    background: linear-gradient(135deg, #3182ce, #63b3ed);
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(49, 130, 206, 0.35);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect cho nút bấm */
+#btn-click:hover {
+    background: linear-gradient(135deg, #2b6cb0, #4299e1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(49, 130, 206, 0.5);
+}
+
+#btn-click:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(49, 130, 206, 0.3);
+}

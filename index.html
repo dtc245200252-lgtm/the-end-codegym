@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thào Quang Vinh | Frontend Developer Portfolio — CodeGym</title>
+    
+    <!-- Meta tags for SEO & Social Sharing -->
+    <meta name="description" content="Portfolio cá nhân và tổng hợp các dự án thực hành HTML5 & CSS3 của Thào Quang Vinh tại CodeGym. Phong cách Oxblood & Warm White.">
+    <meta name="author" content="Thào Quang Vinh">
+    <meta name="keywords" content="Thào Quang Vinh, Frontend Developer, Portfolio, CodeGym, HTML5, CSS3, Flexbox, Responsive Web Design">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Thào Quang Vinh | Frontend Developer Portfolio">
+    <meta property="og:description" content="Khám phá các sản phẩm và bài tập lập trình web được xây dựng bởi Thào Quang Vinh.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========================================================
+         HEADER / NAVIGATION
+         ======================================================== -->
+    <header class="site-header" id="header">
+        <div class="container nav-container">
+            <a href="#hero" class="brand-logo" aria-label="Trang chủ">
+                <span class="logo-text">Vinh<span class="logo-dot">.Dev</span></span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link"><i class="fa-regular fa-user"></i> Giới thiệu</a></li>
+                    <li><a href="#skills" class="nav-link"><i class="fa-solid fa-layer-group"></i> Kỹ năng</a></li>
+                    <li><a href="#projects" class="nav-link"><i class="fa-solid fa-laptop-code"></i> Dự án & Lab</a></li>
+                    <li><a href="#roadmap" class="nav-link"><i class="fa-solid fa-timeline"></i> Hành trình</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fa-regular fa-paper-plane"></i> Liên hệ</a></li>
+                </ul>
+            </nav>
+
+            <!-- Nav Actions -->
+            <div class="nav-actions">
+                <!-- Theme Switcher (Editorial Mode) -->
+                <button id="themeToggleBtn" class="action-btn theme-toggle" title="Chuyển đổi giao diện Sáng / Tối" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon dark-icon"></i>
+                    <i class="fa-solid fa-sun light-icon"></i>
+                </button>
+
+                <!-- Netlify Ready Badge Modal Trigger -->
+                <button id="netlifyGuideBtn" class="btn btn-sm btn-outline-cyan netlify-pill" title="Hướng dẫn xuất bản Netlify">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <span>Netlify Ready</span>
+                </button>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobileMenuBtn" class="action-btn mobile-toggle" aria-label="Menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========================================================
+             HERO SECTION — EDITORIAL PORTRAIT & TYPOGRAPHY
+             ======================================================== -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-container">
+                <!-- Hero Content -->
+                <div class="hero-content">
+                    <div class="hero-eyebrow">
+                        <span class="status-dot"></span>
+                        <span>Học Viên Tốt Nghiệp CodeGym · Frontend Developer</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Xin chào, tôi là <br>
+                        <span class="hero-name">Thào Quang Vinh</span>
+                    </h1>
+
+                    <div class="typewriter-box">
+                        <span class="typewriter-prefix">Tôi là </span>
+                        <span id="typewriterText" class="typewriter-dynamic"></span>
+                        <span class="typewriter-cursor">|</span>
+                    </div>
+
+                    <p class="hero-description">
+                        Lập trình viên đam mê kiến tạo trải nghiệm web chỉn chu, hiện đại, tối ưu giao diện UI/UX và biến ý tưởng thành những trang web chuẩn responsive, thẩm mỹ cao từ nền tảng vững chắc tại <strong>CodeGym</strong>.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-arrow-down"></i>
+                            <span>Khám Phá Các Dự Án</span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fa-regular fa-paper-plane"></i>
+                            <span>Kết Nối Với Tôi</span>
+                        </a>
+                        <button id="heroQuickDemoBtn" class="btn btn-tertiary">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <span>Đồ Án Capstone LMS</span>
+                        </button>
+                    </div>
+
+                    <!-- Social Icons -->
+                    <div class="hero-socials">
+                        <span class="social-label">Mạng xã hội:</span>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub" id="socialGithub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook" id="socialFacebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn" id="socialLinkedin">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:thaoquangvinh.dev@gmail.com" class="social-link" title="Gửi Email">
+                            <i class="fa-regular fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Visual / Editorial Portrait Frame -->
+                <div class="hero-visual">
+                    <div class="avatar-card-wrapper">
+                        <div class="avatar-card">
+                            <div class="avatar-img-container">
+                                <img src="assets/avatar.jpg" alt="Ảnh chân dung Thào Quang Vinh" class="avatar-img" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80'">
+                            </div>
+
+                            <div class="avatar-info">
+                                <h3 class="avatar-name">Thào Quang Vinh</h3>
+                                <p class="avatar-role">Frontend Web Developer</p>
+                                <div class="avatar-tags">
+                                    <span class="tag">HTML5</span>
+                                    <span class="tag">CSS3</span>
+                                    <span class="tag">Flexbox</span>
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">Git</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Ruled Strip -->
+            <div class="container hero-stats-container">
+                <div class="stats-ruled-bar">
+                    <div class="stat-item">
+                        <div class="stat-number"><span class="counter" data-target="20">0</span><span class="stat-plus">+</span></div>
+                        <div class="stat-label">Bài Tập & Mini Projects</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number"><span class="counter" data-target="100">0</span><span class="stat-plus">%</span></div>
+                        <div class="stat-label">Hoàn Thành Khóa Học</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number"><span class="counter" data-target="12">0</span><span class="stat-plus">+</span></div>
+                        <div class="stat-label">Kỹ Thuật Layout Làm Chủ</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number"><span class="counter" data-target="1">0</span></div>
+                        <div class="stat-label">Đồ Án Tốt Nghiệp LMS</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             ABOUT SECTION
+             ======================================================== -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-tag"><i class="fa-regular fa-id-badge"></i> VỀ BẢN THÂN</div>
+                    <h2 class="section-title">Hành Trình & Định Hướng Nghề Nghiệp</h2>
+                    <p class="section-subtitle">Từ con số không đến việc tự tay xây dựng những giao diện trang web sống động, chuẩn mực và có gu thẩm mỹ trưởng thành</p>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Column 1: Story -->
+                    <div class="about-card story-card">
+                        <h3 class="about-card-title"><i class="fa-solid fa-compass text-oxblood"></i> Câu chuyện & Định hướng</h3>
+                        <p class="about-text">
+                            Xin chào! Tôi là <strong>Thào Quang Vinh</strong>. Hành trình đến với lập trình web của tôi bắt đầu từ sự tò mò về cách các trang web hoạt động trên Internet và mong muốn xây dựng các sản phẩm số có giá trị thực tiễn.
+                        </p>
+                        <p class="about-text">
+                            Tại <strong>CodeGym</strong>, tôi đã từng bước rèn luyện tư duy lập trình thông qua việc thực hành liên tục: bắt đầu từ các thẻ HTML cấu trúc sơ khai, chinh phục từng pixel của CSS Box Model, làm chủ bố cục linh hoạt với Flexbox & CSS Grid, và hiện thực hoá đồ án thực tế <em>Landing Page CodeGym Career</em> với Bootstrap và JavaScript.
+                        </p>
+                        <p class="about-text highlight-box">
+                            <i class="fa-solid fa-quote-left"></i>
+                            Mục tiêu của tôi là trở thành một <strong>Frontend Developer</strong> chuyên nghiệp với tư duy sản phẩm, kiến tạo những giao diện không chỉ đẹp mắt mà còn mang lại giá trị thiết thực và trải nghiệm mượt mà nhất cho người dùng.
+                        </p>
+                    </div>
+
+                    <!-- Column 2: Personal Info & Hobbies -->
+                    <div class="about-card info-card">
+                        <h3 class="about-card-title"><i class="fa-solid fa-address-card text-oxblood"></i> Thông tin cơ bản</h3>
+                        
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="info-label"><i class="fa-solid fa-user-tag"></i> Họ và tên:</span>
+                                <span class="info-value">Thào Quang Vinh</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="fa-solid fa-graduation-cap"></i> Khóa học:</span>
+                                <span class="info-value">HTML5 & CSS3 Chuyên Sâu (CodeGym)</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="fa-solid fa-location-dot"></i> Nơi sống:</span>
+                                <span class="info-value">Việt Nam</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="fa-solid fa-envelope"></i> Email:</span>
+                                <span class="info-value"><a href="mailto:thaoquangvinh.dev@gmail.com">thaoquangvinh.dev@gmail.com</a></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="fa-solid fa-circle-check text-success"></i> Tình trạng:</span>
+                                <span class="info-value badge-status">Đã tốt nghiệp khóa học & Sẵn sàng đón nhận cơ hội mới</span>
+                            </div>
+                        </div>
+
+                        <div class="hobbies-wrapper">
+                            <h4 class="sub-heading"><i class="fa-solid fa-heart text-oxblood"></i> Sở thích & Phong cách sống</h4>
+                            <div class="hobby-chips">
+                                <span class="hobby-chip"><i class="fa-solid fa-code"></i> Lập trình sáng tạo</span>
+                                <span class="hobby-chip"><i class="fa-solid fa-book-open"></i> Đọc sách công nghệ</span>
+                                <span class="hobby-chip"><i class="fa-solid fa-futbol"></i> Chơi thể thao</span>
+                                <span class="hobby-chip"><i class="fa-solid fa-plane-departure"></i> Du lịch khám phá</span>
+                                <span class="hobby-chip"><i class="fa-solid fa-music"></i> Âm nhạc thư giãn</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             SKILLS SECTION — STRUCTURED EDITORIAL MATRIX
+             ======================================================== -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-tag"><i class="fa-solid fa-gears"></i> NĂNG LỰC CHUYÊN MÔN</div>
+                    <h2 class="section-title">Hộp Công Cụ & Kỹ Năng Đã Tích Lũy</h2>
+                    <p class="section-subtitle">Những kiến thức và kỹ thuật vững chắc được rèn giũa qua toàn bộ bài tập thực hành theo chuẩn mực công nghiệp</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- HTML5 Core -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <div class="cat-icon"><i class="fa-brands fa-html5"></i></div>
+                            <div>
+                                <h3 class="cat-title">HTML5 Semantics</h3>
+                                <p class="cat-desc">Nền tảng cấu trúc website chuẩn mực</p>
+                            </div>
+                        </div>
+                        <ul class="skill-feature-list">
+                            <li><i class="fa-solid fa-check"></i> Thẻ ngữ nghĩa: header, nav, main, section, article, footer</li>
+                            <li><i class="fa-solid fa-check"></i> Biểu mẫu phức tạp: input types, validation, select, textarea</li>
+                            <li><i class="fa-solid fa-check"></i> Xử lý Bảng biểu đa tầng (rowspan, colspan, caption, th, td)</li>
+                            <li><i class="fa-solid fa-check"></i> Media & Multimedia: nhúng ảnh, audio, liên kết anchor</li>
+                        </ul>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-header">
+                                <span>Mức độ thành thạo</span>
+                                <span class="font-bold text-oxblood">95%</span>
+                            </div>
+                            <div class="progress-track"><div class="progress-fill" style="width: 95%;"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- CSS3 & Modern Layout -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <div class="cat-icon"><i class="fa-brands fa-css3-alt"></i></div>
+                            <div>
+                                <h3 class="cat-title">CSS3 & Layouts</h3>
+                                <p class="cat-desc">Nghệ thuật trình bày và mô hình hộp</p>
+                            </div>
+                        </div>
+                        <ul class="skill-feature-list">
+                            <li><i class="fa-solid fa-check"></i> Flexbox chuyên sâu (justify-content, align-items, flex-wrap)</li>
+                            <li><i class="fa-solid fa-check"></i> Mô hình Box Model (content, padding, border, margin)</li>
+                            <li><i class="fa-solid fa-check"></i> Kỹ thuật căn giữa hoàn hảo chỉ với 3 dòng CSS</li>
+                            <li><i class="fa-solid fa-check"></i> Fixed Header, Sticky Navbar, Transitions & Keyframes</li>
+                        </ul>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-header">
+                                <span>Mức độ thành thạo</span>
+                                <span class="font-bold text-oxblood">90%</span>
+                            </div>
+                            <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks & UI -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <div class="cat-icon"><i class="fa-solid fa-palette"></i></div>
+                            <div>
+                                <h3 class="cat-title">UI & Frameworks</h3>
+                                <p class="cat-desc">Xây dựng giao diện nhanh và tương tác cao</p>
+                            </div>
+                        </div>
+                        <ul class="skill-feature-list">
+                            <li><i class="fa-solid fa-check"></i> Bootstrap 4 & Material Design Bootstrap (MDBootstrap)</li>
+                            <li><i class="fa-solid fa-check"></i> Responsive Web Design (Media Queries đa thiết bị)</li>
+                            <li><i class="fa-solid fa-check"></i> Phối màu HSL/HEX, Typography Google Fonts & FontAwesome 6</li>
+                            <li><i class="fa-solid fa-check"></i> Tối ưu trải nghiệm tương tác với JavaScript & DOM</li>
+                        </ul>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-header">
+                                <span>Mức độ thành thạo</span>
+                                <span class="font-bold text-oxblood">85%</span>
+                            </div>
+                            <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Workflow -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <div class="cat-icon"><i class="fa-solid fa-terminal"></i></div>
+                            <div>
+                                <h3 class="cat-title">Công Cụ & Triển Khai</h3>
+                                <p class="cat-desc">Quy trình làm việc chuyên nghiệp</p>
+                            </div>
+                        </div>
+                        <ul class="skill-feature-list">
+                            <li><i class="fa-solid fa-check"></i> Git & GitHub: clone, commit, push, quản lý branch bài tập</li>
+                            <li><i class="fa-solid fa-check"></i> Triển khai hosting tự động: Netlify Drop, GitHub Pages</li>
+                            <li><i class="fa-solid fa-check"></i> Chrome DevTools: Debug CSS, kiểm tra Box Model & Responsive</li>
+                            <li><i class="fa-solid fa-check"></i> VS Code & Các tiện ích mở rộng tối ưu tốc độ viết code</li>
+                        </ul>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-header">
+                                <span>Mức độ thành thạo</span>
+                                <span class="font-bold text-oxblood">88%</span>
+                            </div>
+                            <div class="progress-track"><div class="progress-fill" style="width: 88%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             FEATURED CAPSTONE PROJECT HIGHLIGHT
+             ======================================================== -->
+        <section class="section capstone-section" id="capstone">
+            <div class="container">
+                <div class="capstone-banner">
+                    <div class="capstone-badge">
+                        <i class="fa-solid fa-award"></i> ĐỒ ÁN TỐT NGHIỆP CAPSTONE
+                    </div>
+                    <div class="capstone-content-grid">
+                        <div class="capstone-text">
+                            <h2 class="capstone-title">Landing Page CodeGym Career</h2>
+                            <p class="capstone-desc">
+                                Trang đích chuyên nghiệp giới thiệu chương trình đào tạo lập trình viên Coding Bootcamp, được tích hợp đầy đủ hệ thống UI Material Design, thanh điều hướng fixed navbar, form tư vấn tuyển sinh với modal phản hồi tức thì, bộ lọc lộ trình, bảng học phí và phần chân trang hệ thống toàn quốc.
+                            </p>
+                            <div class="capstone-tech-tags">
+                                <span class="tech-tag"><i class="fa-brands fa-bootstrap"></i> Bootstrap 4</span>
+                                <span class="tech-tag"><i class="fa-solid fa-cube"></i> MDBootstrap</span>
+                                <span class="tech-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                                <span class="tech-tag"><i class="fa-solid fa-mobile-screen"></i> Responsive 100%</span>
+                                <span class="tech-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Material UX</span>
+                            </div>
+                            <div class="capstone-actions">
+                                <button class="btn btn-primary preview-project-btn" data-url="projects/landing-page-cg-lms/index.html" data-title="CodeGym Career Landing Page">
+                                    <i class="fa-solid fa-eye"></i> Xem Live Demo Ngay
+                                </button>
+                                <a href="projects/landing-page-cg-lms/index.html" target="_blank" class="btn btn-secondary">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Mở Trang Đầy Đủ
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="capstone-preview-card">
+                            <div class="mockup-browser">
+                                <div class="browser-header">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                    <span class="browser-address">https://codegym-career.demo.local</span>
+                                </div>
+                                <div class="mockup-screen">
+                                    <div class="mockup-hero-bg">
+                                        <div class="mockup-inner-pill">Khóa Học Bootcamp</div>
+                                        <h4>Trở Thành Lập Trình Viên Full-Stack</h4>
+                                        <p>Cam kết việc làm 100% bằng văn bản</p>
+                                        <div class="mockup-mini-btn">Đăng Ký Tư Vấn</div>
+                                    </div>
+                                    <div class="mockup-cards-row">
+                                        <div class="mini-card"></div>
+                                        <div class="mini-card"></div>
+                                        <div class="mini-card"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             PROJECTS & EXERCISES LAB (SHOWCASE GALLERY)
+             ======================================================== -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-tag"><i class="fa-solid fa-folder-tree"></i> THƯ VIỆN BÀI TẬP & DỰ ÁN</div>
+                    <h2 class="section-title">Tổng Hợp Tất Cả Sản Phẩm Thực Hành</h2>
+                    <p class="section-subtitle">Toàn bộ 20 bài thực hành và dự án từ cơ bản đến nâng cao được sắp xếp khoa học, có thể xem trực tiếp hoặc mở mã nguồn</p>
+                </div>
+
+                <!-- Controls: Filter & Search Bar -->
+                <div class="projects-control-bar">
+                    <div class="filter-tabs" id="filterTabs">
+                        <button class="filter-btn active" data-filter="all">Tất Cả (20)</button>
+                        <button class="filter-btn" data-filter="featured">⭐ Tiêu Biểu</button>
+                        <button class="filter-btn" data-filter="layout">📐 Layout & Flexbox</button>
+                        <button class="filter-btn" data-filter="forms">📝 Biểu Mẫu & Form</button>
+                        <button class="filter-btn" data-filter="tables">📊 Bảng & Dữ Liệu</button>
+                        <button class="filter-btn" data-filter="styles">🎨 CSS & Thẩm Mỹ</button>
+                    </div>
+
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" id="projectSearchInput" placeholder="Tìm kiếm bài tập theo tên, công nghệ..." aria-label="Tìm kiếm bài tập">
+                        <button id="clearSearchBtn" class="clear-btn" title="Xóa tìm kiếm">&times;</button>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Cards populated dynamically by script.js -->
+                </div>
+
+                <!-- No Results State -->
+                <div id="noResultsState" class="no-results hidden">
+                    <div class="no-results-icon"><i class="fa-solid fa-folder-open"></i></div>
+                    <h3>Không tìm thấy bài tập phù hợp</h3>
+                    <p>Hãy thử tìm kiếm với từ khóa khác hoặc bấm nút "Tất Cả".</p>
+                    <button id="resetFilterBtn" class="btn btn-sm btn-primary">Xem Tất Cả Bài Tập</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             LEARNING ROADMAP / MILESTONES
+             ======================================================== -->
+        <section class="section roadmap-section" id="roadmap">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-tag"><i class="fa-solid fa-route"></i> LỘ TRÌNH ĐÀO TẠO</div>
+                    <h2 class="section-title">Hành Trình Chinh Phục Tại CodeGym</h2>
+                    <p class="section-subtitle">Từng chặng đường học tập và hoàn thiện kỹ năng từ ngày đầu tiên đến khi tốt nghiệp</p>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+
+                    <!-- Milestone 1 -->
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"><i class="fa-solid fa-seedling"></i></div>
+                        <div class="timeline-card">
+                            <span class="timeline-badge">Chặng 1: Khởi đầu</span>
+                            <h3 class="timeline-title">Nền Tảng HTML & Cấu Trúc Trang Web</h3>
+                            <p class="timeline-desc">
+                                Làm quen với kiến trúc web, cú pháp HTML, các thẻ tiêu đề h1-h6, định dạng văn bản, danh sách có thứ tự và không thứ tự, nhúng ảnh và liên kết siêu văn bản.
+                            </p>
+                            <div class="timeline-tags">
+                                <span>Thẻ tiêu đề</span>
+                                <span>Định dạng vb</span>
+                                <span>Liên kết & Hình ảnh</span>
+                                <span>Git cơ bản</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2 -->
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"><i class="fa-solid fa-table-list"></i></div>
+                        <div class="timeline-card">
+                            <span class="timeline-badge">Chặng 2: Dữ liệu & Tương tác</span>
+                            <h3 class="timeline-title">Bảng Biểu & Biểu Mẫu (Tables & Forms)</h3>
+                            <p class="timeline-desc">
+                                Xây dựng bảng thời khóa biểu và xử lý gộp hàng gộp cột (rowspan/colspan) phức tạp. Thiết kế form đăng ký tài khoản và bảng khảo sát ý kiến khách hàng (Survey Form).
+                            </p>
+                            <div class="timeline-tags">
+                                <span>Thời khóa biểu</span>
+                                <span>Gộp row-col</span>
+                                <span>Form đăng ký</span>
+                                <span>Survey Form</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3 -->
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"><i class="fa-solid fa-paintbrush"></i></div>
+                        <div class="timeline-card">
+                            <span class="timeline-badge">Chặng 3: Phong cách hóa</span>
+                            <h3 class="timeline-title">CSS Nền Tảng, Màu Sắc & Typography</h3>
+                            <p class="timeline-desc">
+                                3 phương pháp nhúng CSS, nguyên tắc cascade & specificity. Thiết kế giao diện máy phát nhạc chủ đề Emerald, phối hợp màu sắc, background image và tùy biến bullet list bằng file SVG.
+                            </p>
+                            <div class="timeline-tags">
+                                <span>Nhúng CSS</span>
+                                <span>Màu sắc Emerald</span>
+                                <span>Background & Fonts</span>
+                                <span>Custom List SVG</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 4 -->
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"><i class="fa-solid fa-cubes"></i></div>
+                        <div class="timeline-card">
+                            <span class="timeline-badge">Chặng 4: Mô hình hộp & Bố cục</span>
+                            <h3 class="timeline-title">Box Model, Flexbox & Modern CSS</h3>
+                            <p class="timeline-desc">
+                                Làm chủ Box Model từ bài 1 đến bài 3. Kỹ thuật căn giữa hoàn hảo chỉ với 3 dòng CSS. Xây dựng layout cố định Header/Footer và lưới sản phẩm card responsive với Flexbox.
+                            </p>
+                            <div class="timeline-tags">
+                                <span>Box Model 1-2-3</span>
+                                <span>Căn giữa 3 dòng</span>
+                                <span>Fixed Header/Footer</span>
+                                <span>Flexbox Cards</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 5 -->
+                    <div class="timeline-item left">
+                        <div class="timeline-dot highlight-dot"><i class="fa-solid fa-trophy"></i></div>
+                        <div class="timeline-card highlight-card">
+                            <span class="timeline-badge badge-gold">Chặng 5: Đích đến vinh quang</span>
+                            <h3 class="timeline-title">Đồ Án Tốt Nghiệp & Portfolio Toàn Diện</h3>
+                            <p class="timeline-desc">
+                                Xây dựng Landing Page tuyển sinh CodeGym Career với Material Design, tối ưu responsive trên mọi thiết bị và đóng gói toàn bộ thư viện bài tập thành trang Portfolio hoàn chỉnh sẵn sàng xuất bản Netlify.
+                            </p>
+                            <div class="timeline-tags">
+                                <span>CodeGym LMS Landing</span>
+                                <span>Trang Portfolio Cá Nhân</span>
+                                <span>Netlify Deploy Ready</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             NETLIFY DEPLOYMENT READY BANNER / MODAL INFO
+             ======================================================== -->
+        <section class="section netlify-section">
+            <div class="container">
+                <div class="netlify-cta-box">
+                    <div class="netlify-cta-icon">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </div>
+                    <div class="netlify-cta-text">
+                        <h3>Sẵn Sàng Triển Khai Lên Netlify Miễn Phí Trong 60 Giây</h3>
+                        <p>
+                            Toàn bộ dự án đã được tích hợp sạch sẽ, chuẩn hóa đường dẫn tương đối và tối ưu cấu trúc. Bạn chỉ cần kéo thả toàn bộ thư mục này vào Netlify Drop để nhận đường link trực tuyến gửi cho bạn bè, giảng viên hoặc gắn vào CV!
+                        </p>
+                    </div>
+                    <div class="netlify-cta-actions">
+                        <button id="openNetlifyModalBtn" class="btn btn-primary">
+                            <i class="fa-solid fa-circle-info"></i> Xem Hướng Dẫn Kéo Thả
+                        </button>
+                        <a href="https://app.netlify.com/drop" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Mở Netlify Drop
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             CONTACT SECTION
+             ======================================================== -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-tag"><i class="fa-regular fa-paper-plane"></i> KẾT NỐI</div>
+                    <h2 class="section-title">Liên Hệ & Hợp Tác Cùng Tôi</h2>
+                    <p class="section-subtitle">Đừng ngần ngại để lại lời nhắn hoặc kết nối qua các kênh liên lạc bên dưới</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Information -->
+                    <div class="contact-info-card">
+                        <h3 class="contact-card-title">Thông Tin Liên Lạc</h3>
+                        <p class="contact-card-desc">
+                            Tôi luôn sẵn sàng đón nhận những ý kiến đóng góp, cơ hội thực tập, việc làm hoặc trao đổi chuyên môn về phát triển web.
+                        </p>
+
+                        <div class="contact-detail-list">
+                            <a href="mailto:thaoquangvinh.dev@gmail.com" class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-regular fa-envelope"></i></div>
+                                <div>
+                                    <span class="detail-label">Email trực tiếp</span>
+                                    <span class="detail-value">thaoquangvinh.dev@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <span class="detail-label">Địa điểm</span>
+                                    <span class="detail-value">Việt Nam</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-school"></i></div>
+                                <div>
+                                    <span class="detail-label">Trung tâm đào tạo</span>
+                                    <span class="detail-value">CodeGym Vietnam</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links-block">
+                            <h4>Kênh mạng xã hội</h4>
+                            <div class="social-btn-row">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn">
+                                    <i class="fa-brands fa-facebook"></i> Facebook
+                                </a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill-btn">
+                                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-card">
+                        <h3 class="contact-card-title">Gửi Lời Nhắn Nhanh</h3>
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="senderName" class="form-label">Họ và tên của bạn <span class="text-danger">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-user input-icon"></i>
+                                    <input type="text" id="senderName" class="form-control" placeholder="Ví dụ: Nguyễn Văn A" required>
+                                </div>
+                                <span class="form-error" id="nameError">Vui lòng nhập họ và tên của bạn</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="senderEmail" class="form-label">Địa chỉ Email <span class="text-danger">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-envelope input-icon"></i>
+                                    <input type="email" id="senderEmail" class="form-control" placeholder="Ví dụ: email@example.com" required>
+                                </div>
+                                <span class="form-error" id="emailError">Vui lòng nhập địa chỉ email hợp lệ</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="senderSubject" class="form-label">Chủ đề liên hệ</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-bookmark input-icon"></i>
+                                    <input type="text" id="senderSubject" class="form-control" placeholder="Ví dụ: Đóng góp ý kiến về đồ án / Cơ hội việc làm">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="senderMessage" class="form-label">Nội dung tin nhắn <span class="text-danger">*</span></label>
+                                <div class="input-wrapper">
+                                    <textarea id="senderMessage" rows="4" class="form-control textarea-control" placeholder="Hãy viết lời nhắn của bạn tại đây..." required></textarea>
+                                </div>
+                                <span class="form-error" id="messageError">Vui lòng nhập nội dung tin nhắn</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block" id="sendMessageBtn">
+                                <i class="fa-regular fa-paper-plane"></i>
+                                <span>Gửi Tin Nhắn Ngay</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================================
+         FOOTER — GROUNDED IN INK & WARM WHITE
+         ======================================================== -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#hero" class="brand-logo">
+                        <span class="logo-text">Thào Quang Vinh<span class="logo-dot">.Dev</span></span>
+                    </a>
+                    <p class="footer-tagline">
+                        Trang web portfolio tốt nghiệp khóa học HTML & CSS tại CodeGym. Thiết kế với tư duy sản phẩm, mã nguồn sạch và phong cách editorial tinh tế.
+                    </p>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-heading">Điều Hướng Nhanh</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#about">Về bản thân</a></li>
+                        <li><a href="#skills">Kỹ năng</a></li>
+                        <li><a href="#projects">Dự án & Lab</a></li>
+                        <li><a href="#roadmap">Lộ trình CodeGym</a></li>
+                        <li><a href="#contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-heading">Dự Án Nổi Bật</h4>
+                    <ul class="footer-nav">
+                        <li><a href="projects/landing-page-cg-lms/index.html" target="_blank">Landing Page LMS</a></li>
+                        <li><a href="projects/survey-market-research/index.html" target="_blank">Khảo Sát Khách Hàng</a></li>
+                        <li><a href="projects/card-list-flexbox/index.html" target="_blank">Lưới Thẻ Flexbox</a></li>
+                        <li><a href="projects/emerald-music-ui/emerald.html" target="_blank">Emerald Music UI</a></li>
+                        <li><a href="projects/register-form/index.html" target="_blank">Form Đăng Ký</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright-text">
+                    &copy; 2026 <strong>Thào Quang Vinh</strong>. Tất cả quyền được bảo lưu. Dự án tốt nghiệp CodeGym.
+                </p>
+                <div class="footer-badges">
+                    <span class="badge-item"><i class="fa-brands fa-html5"></i> HTML5</span>
+                    <span class="badge-item"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                    <span class="badge-item"><i class="fa-brands fa-js"></i> Vanilla JS</span>
+                    <span class="badge-item"><i class="fa-solid fa-cloud"></i> Netlify Ready</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================================
+         MODAL: LIVE PROJECT PREVIEW (IFRAME)
+         ======================================================== -->
+    <div class="modal-backdrop" id="previewModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-dialog modal-preview-dialog">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-icon"><i class="fa-solid fa-display"></i></span>
+                    <h3 id="modalProjectTitle" class="modal-title">Xem Demo Trực Tiếp</h3>
+                    <span id="modalProjectTag" class="modal-badge">Demo</span>
+                </div>
+
+                <!-- Viewport Mode Switcher -->
+                <div class="viewport-switchers">
+                    <button class="vp-btn active" data-viewport="desktop" title="Chế độ Desktop (100%)">
+                        <i class="fa-solid fa-desktop"></i>
+                    </button>
+                    <button class="vp-btn" data-viewport="tablet" title="Chế độ Tablet (768px)">
+                        <i class="fa-solid fa-tablet-screen-button"></i>
+                    </button>
+                    <button class="vp-btn" data-viewport="mobile" title="Chế độ Mobile (375px)">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </button>
+                </div>
+
+                <div class="modal-actions">
+                    <a id="modalExternalLink" href="#" target="_blank" rel="noopener noreferrer" class="modal-action-btn" title="Mở trong tab mới">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <button id="closePreviewModalBtn" class="modal-action-btn modal-close" title="Đóng cửa sổ">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal-body preview-modal-body">
+                <div class="iframe-container" id="iframeWrapper">
+                    <iframe id="previewIframe" src="" title="Xem demo dự án" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================
+         MODAL: NETLIFY DEPLOYMENT GUIDE (60 SECONDS)
+         ======================================================== -->
+    <div class="modal-backdrop" id="netlifyModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-dialog modal-guide-dialog">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-icon"><i class="fa-solid fa-cloud-arrow-up"></i></span>
+                    <h3 class="modal-title">Hướng Dẫn Xuất Bản Netlify Drop Trong 60 Giây</h3>
+                </div>
+                <button id="closeNetlifyModalBtn" class="modal-action-btn modal-close" title="Đóng">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="modal-body guide-modal-body">
+                <div class="guide-step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h4>Mở Trang Netlify Drop</h4>
+                        <p>Truy cập vào liên kết chính thức: <a href="https://app.netlify.com/drop" target="_blank" class="text-oxblood font-bold">app.netlify.com/drop <i class="fa-solid fa-arrow-up-right-from-square"></i></a> trên trình duyệt web của bạn.</p>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h4>Kéo Thả Thư Mục Dự Án</h4>
+                        <p>Mở File Explorer trên máy tính, kéo toàn bộ thư mục <code>WEB-MY-BASE</code> (chứa file <code>index.html</code> này cùng thư mục <code>projects</code> và <code>assets</code>) và thả vào ô vuông được chỉ định trên Netlify.</p>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h4>Nhận URL Hoạt Động & Chia Sẻ</h4>
+                        <p>Netlify sẽ tự động tải lên và cấp cho bạn một đường link công khai (ví dụ: <code>https://ten-ngau-nhien.netlify.app</code>). Bạn có thể đổi tên miền thành <code>thaoquangvinh-portfolio.netlify.app</code> trong phần Site Settings!</p>
+                    </div>
+                </div>
+
+                <div class="guide-alert">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div>
+                        <strong>Toàn bộ 20 bài tập đều đã sẵn sàng!</strong> Khi tải thư mục này lên Netlify, tất cả liên kết đến các bài tập con đều hoạt động 100% không lo lỗi 404!
+                    </div>
+                </div>
+
+                <div class="text-center mt-3">
+                    <a href="https://app.netlify.com/drop" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i class="fa-solid fa-rocket"></i> Truy Cập Netlify Drop Ngay
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================
+         TOAST NOTIFICATION (Feedback)
+         ======================================================== -->
+    <div id="toastNotification" class="toast-container" role="alert" aria-live="assertive">
+        <div class="toast-icon" id="toastIcon"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="toast-content">
+            <h4 id="toastTitle" class="toast-title">Thành công!</h4>
+            <p id="toastMessage" class="toast-msg">Nội dung thông báo</p>
+        </div>
+        <button id="toastCloseBtn" class="toast-close">&times;</button>
+    </div>
+
+    <!-- ========================================================
+         FLOATING ACTION BUTTONS (Scroll To Top)
+         ======================================================== -->
+    <button id="scrollToTopBtn" class="scroll-top-btn" title="Lên đầu trang" aria-label="Lên đầu trang">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- Project Data & Main Logic Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

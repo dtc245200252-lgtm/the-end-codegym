@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Nhúng CSS vào trang HTML</title>
+
+    <!-- PHẦN 3: LIÊN KẾT EXTERNAL STYLE (style.css) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PHẦN 2: SỬ DỤNG INTERNAL STYLE (CSS NỘI BỘ TRONG THẺ <style>) -->
+    <style>
+        /* Định dạng màu sắc văn bản theo phong cách Internal Style */
+        .internal-heading {
+            color: #2563eb; /* Màu xanh dương hiện đại (Blue-600) */
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .internal-paragraph {
+            color: #1e40af; /* Màu xanh dương đậm (Blue-800) */
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <span class="badge">Thực hành CSS</span>
+            <h1>Nhúng CSS Vào Trang HTML</h1>
+            <p>Minh họa 3 cách nhúng CSS cơ bản: Inline Style, Internal Style và External Style</p>
+        </header>
+
+        <main class="card-grid">
+            <!-- PHẦN 1: INLINE STYLE (CSS TRỰC TIẾP TRONG THẺ) -->
+            <section class="section-box">
+                <span class="tag tag-inline">Phần 1: Inline Style</span>
+                <h2 style="color: #d97706; font-size: 1.35rem; font-weight: 700; margin-bottom: 8px;">
+                    Tiêu đề định dạng bằng Inline-style
+                </h2>
+                <p style="color: #92400e; font-size: 1rem; line-height: 1.6;">
+                    Đoạn văn này được thay đổi màu sắc trực tiếp thông qua thuộc tính <code>style="color: #92400e;"</code> được viết ngay trong thẻ HTML.
+                </p>
+            </section>
+
+            <!-- PHẦN 2: INTERNAL STYLE (CSS TRONG THẺ <style>) -->
+            <section class="section-box">
+                <span class="tag tag-internal">Phần 2: Internal Style</span>
+                <h2 class="internal-heading">
+                    Tiêu đề định dạng bằng Internal-style
+                </h2>
+                <p class="internal-paragraph">
+                    Đoạn văn này được thay đổi màu sắc thông qua thẻ <code>&lt;style&gt;</code> khai báo ở phần <code>&lt;head&gt;</code> của trang HTML.
+                </p>
+            </section>
+
+            <!-- PHẦN 3: EXTERNAL STYLE (CSS TRONG FILE style.css RIÊNG BIỆT) -->
+            <section class="section-box">
+                <span class="tag tag-external">Phần 3: External Style</span>
+                <h2 class="external-heading">
+                    Tiêu đề định dạng bằng External-style
+                </h2>
+                <p class="external-paragraph">
+                    Đoạn văn này được thay đổi màu sắc thông qua file CSS bên ngoài (<code>style.css</code>) được liên kết bằng thẻ <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>.
+                </p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 - Bài tập CodeGym: Nhúng CSS vào trang HTML</p>
+        </footer>
+    </div>
+
+</body>
+</html>

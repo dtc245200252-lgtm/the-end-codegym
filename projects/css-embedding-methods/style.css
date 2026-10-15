@@ -1,0 +1,149 @@
+/* ======================================================
+   External Style Sheet (style.css)
+   Sử dụng cho toàn bộ giao diện và phần 3 (External CSS)
+   ====================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --primary: #4f46e5;
+    --success: #10b981;
+    --accent: #0ea5e9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+    background: var(--bg-gradient);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 820px;
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 2px dashed var(--border-color);
+}
+
+.header .badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: #e0e7ff;
+    color: #4338ca;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+}
+
+.header p {
+    color: var(--text-muted);
+    margin-top: 8px;
+    font-size: 0.975rem;
+}
+
+.card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.section-box {
+    background: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 24px 28px;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.08);
+}
+
+.tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.tag-inline {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.tag-internal {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.tag-external {
+    background: #d1fae5;
+    color: #047857;
+}
+
+/* ======================================================
+   PHẦN 3: ĐỊNH KIỂU BẰNG EXTERNAL STYLE (CSS NGOẠI VI)
+   Thay đổi màu sắc của tiêu đề và văn bản qua class bên ngoài
+   ====================================================== */
+.external-heading {
+    color: #059669; /* Xanh lá lục bảo sang trọng */
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.external-paragraph {
+    color: #065f46; /* Xanh lá đậm */
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thực hành: Danh sách trong CSS</title>
+  <!-- 1. Chuẩn bị: Liên kết file CSS với HTML -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <span class="badge">CSS Practice</span>
+      <h1>Bài Thực Hành: Danh Sách Trong CSS</h1>
+      <p class="subtitle">Luyện tập định kiểu danh sách với các thuộc tính <code>list-style-type</code>, <code>list-style-image</code>, <code>list-style-position</code>, và thuộc tính rút gọn <code>list-style</code>.</p>
+    </header>
+
+    <main class="grid-layout">
+      <!-- 2. Thay đổi kiểu đánh dấu danh sách (square) -->
+      <section class="card" id="section-square">
+        <div class="card-header">
+          <div class="step-num">02</div>
+          <div>
+            <h2>2. Thay đổi kiểu đánh dấu danh sách</h2>
+            <p class="code-tag"><code>list-style-type: square;</code></p>
+          </div>
+        </div>
+        <div class="card-body">
+          <ul class="list-square">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 3. Thay đổi kiểu đánh dấu danh sách có thứ tự (upper-roman) -->
+      <section class="card" id="section-roman">
+        <div class="card-header">
+          <div class="step-num">03</div>
+          <div>
+            <h2>3. Danh sách có thứ tự (Số La Mã)</h2>
+            <p class="code-tag"><code>list-style-type: upper-roman;</code></p>
+          </div>
+        </div>
+        <div class="card-body">
+          <ol class="list-roman">
+            <li>Học HTML</li>
+            <li>Học CSS</li>
+            <li>Học JavaScript</li>
+            <li>Học Git</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 4. Sử dụng hình ảnh làm dấu đánh dấu -->
+      <section class="card" id="section-image">
+        <div class="card-header">
+          <div class="step-num">04</div>
+          <div>
+            <h2>4. Dấu đánh dấu bằng hình ảnh</h2>
+            <p class="code-tag"><code>list-style-image: url('icon.svg');</code></p>
+          </div>
+        </div>
+        <div class="card-body">
+          <ul class="list-image">
+            <li>Visual Studio Code</li>
+            <li>Google Chrome</li>
+            <li>GitHub</li>
+            <li>Git</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 5. Thay đổi vị trí dấu đánh dấu (outside vs inside) -->
+      <section class="card full-width" id="section-position">
+        <div class="card-header">
+          <div class="step-num">05</div>
+          <div>
+            <h2>5. Thay đổi vị trí dấu đánh dấu</h2>
+            <p class="code-tag">So sánh <code>outside</code> vs <code>inside</code></p>
+          </div>
+        </div>
+        <div class="card-body compare-grid">
+          <div class="compare-box">
+            <h3>Vị trí ngoài (<code>outside</code> - mặc định)</h3>
+            <p class="box-desc">Dấu bullet nằm bên ngoài khối nội dung của phần tử:</p>
+            <ul class="list-outside">
+              <li>Mục danh sách thứ nhất với nội dung có độ dài vừa phải để quan sát rõ lề.</li>
+              <li>Mục danh sách thứ hai.</li>
+              <li>Mục danh sách thứ ba.</li>
+            </ul>
+          </div>
+          <div class="compare-box">
+            <h3>Vị trí trong (<code>inside</code>)</h3>
+            <p class="box-desc">Dấu bullet được đưa vào bên trong dòng nội dung:</p>
+            <ul class="list-inside">
+              <li>Mục danh sách thứ nhất với nội dung có độ dài vừa phải để quan sát rõ lề.</li>
+              <li>Mục danh sách thứ hai.</li>
+              <li>Mục danh sách thứ ba.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Sử dụng thuộc tính rút gọn list-style -->
+      <section class="card" id="section-shorthand">
+        <div class="card-header">
+          <div class="step-num">06</div>
+          <div>
+            <h2>6. Thuộc tính rút gọn list-style</h2>
+            <p class="code-tag"><code>list-style: square inside url('icon.svg');</code></p>
+          </div>
+        </div>
+        <div class="card-body">
+          <ul class="list-shorthand">
+            <li>Cấu hình type, position và image cùng lúc</li>
+            <li>Cú pháp ngắn gọn, dễ quản lý</li>
+            <li>Hỗ trợ fallback type khi ảnh chưa tải xong</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 7. Tạo kiểu danh sách với màu sắc & khoảng cách -->
+      <section class="card" id="section-styled">
+        <div class="card-header">
+          <div class="step-num">07</div>
+          <div>
+            <h2>7. Danh sách với màu sắc & khoảng cách</h2>
+            <p class="code-tag"><code>background-color</code>, <code>color</code>, <code>padding</code>, <code>margin</code></p>
+          </div>
+        </div>
+        <div class="card-body">
+          <ul class="list-colored">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 8. Bài tập tổng hợp: Lộ trình học lập trình Web -->
+      <section class="card full-width" id="section-roadmap">
+        <div class="card-header">
+          <div class="step-num">08</div>
+          <div>
+            <h2>8. Bài tập tổng hợp: Lộ trình học lập trình Web</h2>
+            <p class="code-tag">Áp dụng tổng hợp tất cả thuộc tính đã học</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <ol class="roadmap-list">
+            <li>
+              <div class="roadmap-content">
+                <strong>HTML</strong>
+                <span>Xây dựng khung xương cấu trúc trang web vững chắc</span>
+              </div>
+            </li>
+            <li>
+              <div class="roadmap-content">
+                <strong>CSS</strong>
+                <span>Trang trí giao diện, bố cục, hiệu ứng và responsive</span>
+              </div>
+            </li>
+            <li>
+              <div class="roadmap-content">
+                <strong>JavaScript</strong>
+                <span>Xử lý tương tác, logic và gọi API linh hoạt</span>
+              </div>
+            </li>
+            <li>
+              <div class="roadmap-content">
+                <strong>Git</strong>
+                <span>Quản lý phiên bản mã nguồn, nhánh phát triển</span>
+              </div>
+            </li>
+            <li>
+              <div class="roadmap-content">
+                <strong>GitHub</strong>
+                <span>Lưu trữ kho mã từ xa, làm việc nhóm và CI/CD</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>Thực hành tạo và định kiểu danh sách trong CSS &bull; CodeGym</p>
+    </footer>
+  </div>
+</body>
+</html>

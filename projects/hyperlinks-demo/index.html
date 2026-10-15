@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên kết yêu thích của tôi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 650px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eef2f7;
+        }
+
+        .link-section-title {
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 20px 0 10px 0;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        li a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            color: #334155;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.25s ease;
+        }
+
+        li a:hover {
+            background: #3b82f6;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+            border-color: #3b82f6;
+        }
+
+        .badge {
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 6px;
+            background: #e2e8f0;
+            color: #475569;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+
+        li a:hover .badge {
+            background: rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. Tiêu đề <h1> theo yêu cầu -->
+        <h1>Liên kết yêu thích của tôi</h1>
+
+        <p class="link-section-title">Danh sách các trang web yêu thích:</p>
+        <!-- 2. Danh sách không có thứ tự <ul> chứa ít nhất 3 liên kết đến các trang web khác nhau -->
+        <!-- 3. Liên kết mở trong tab mới với target="_blank" -->
+        <ul>
+            <li>
+                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                    <span>🔍 Google Tìm Kiếm</span>
+                    <span class="badge">Mở tab mới (target="_blank")</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                    <span>🎥 YouTube</span>
+                    <span class="badge">Mở tab mới</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                    <span>💻 GitHub</span>
+                    <span class="badge">Mở tab mới</span>
+                </a>
+            </li>
+        </ul>
+
+        <p class="link-section-title">Liên kết điều hướng nội bộ & liên hệ:</p>
+        <ul>
+            <!-- 4. Liên kết đến file HTML khác trong cùng thư mục (about.html) -->
+            <li>
+                <a href="about.html">
+                    <span>📄 Trang Giới Thiệu (About Me)</span>
+                    <span class="badge">Trang nội bộ (about.html)</span>
+                </a>
+            </li>
+
+            <!-- 5. Liên kết đến email (mailto:) -->
+            <li>
+                <a href="mailto:example@gmail.com">
+                    <span>✉️ Gửi Email Cho Tôi</span>
+                    <span class="badge">mailto:</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

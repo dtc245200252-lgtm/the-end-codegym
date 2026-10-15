@@ -1,0 +1,91 @@
+/* Thiết lập chung cho trang */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #333333;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 26px;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 16px;
+    color: #64748b;
+}
+
+.header code {
+    background-color: #e2e8f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+    color: #0f172a;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Yêu cầu của bài tập: Các thuộc tính Box Model cho class .card */
+.card {
+    width: 280px;
+    height: 150px;
+    padding: 20px;
+    border: 5px solid #3498db;
+    margin: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Thẻ đầu tiên (.card:nth-child(1)): box-sizing: content-box; background-color: #2ecc71 */
+.card:nth-child(1) {
+    box-sizing: content-box;
+    background-color: #2ecc71;
+}
+
+/* Thẻ thứ hai (.card:nth-child(2)): box-sizing: border-box; background-color: #f1c40f */
+.card:nth-child(2) {
+    box-sizing: border-box;
+    background-color: #f1c40f;
+    color: #2d3436; /* Màu chữ sẫm giúp dễ đọc trên nền vàng */
+}
+
+/* Thẻ thứ ba (.card:nth-child(3)): box-sizing: border-box; background-color: #e74c3c */
+.card:nth-child(3) {
+    box-sizing: border-box;
+    background-color: #e74c3c;
+}

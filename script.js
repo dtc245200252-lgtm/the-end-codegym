@@ -9,6 +9,18 @@
 // ========================================================
 const projectsData = [
     {
+        id: "book-landing-page",
+        title: "Landing Page Giới Thiệu Sách (Bootstrap 5 Bestseller)",
+        category: "featured",
+        categoryName: "Đồ Án Bootstrap 5",
+        badgeClass: "badge-featured",
+        icon: "fa-solid fa-book-bookmark",
+        summary: "Trang web tĩnh giới thiệu sách 'Kiến Trúc Web Hiện Đại' đáp ứng trọn vẹn 7 phần: Header, Book Overview, Author, Features, Prices, Download, Reader’s Say và Footer. Kèm hiệu ứng 3D xoay sách, Dark Mode, giỏ hàng tính voucher và tải bản đọc thử PDF.",
+        url: "projects/book-landing-page/index.html",
+        tags: ["Bootstrap 5", "HTML5 Semantic", "CSS 3D Transforms", "Responsive", "Interactive JS"],
+        highlights: "Cải tiến toàn diện từ hoanv7169/bootstrap-demo, thiết kế đẳng cấp, modal đặt mua tự tính voucher CODEGYM2026, tải PDF trực tiếp và responsive đa thiết bị."
+    },
+    {
         id: "landing-page-cg-lms",
         title: "Landing Page CodeGym Career (Capstone)",
         category: "featured",

@@ -22,7 +22,8 @@ WEB-MY-BASE/
 ├── assets/                      # Tài nguyên hình ảnh, avatar
 │   └── avatar.jpg               # Ảnh đại diện cá nhân của Thào Quang Vinh
 │
-└── projects/                    # Thư mục chứa toàn bộ 20 bài thực hành & đồ án con
+└── projects/                    # Thư mục chứa toàn bộ 21 bài thực hành & đồ án con
+    ├── book-landing-page/       # 📚 ĐỒ ÁN BOOTSTRAP 5: Landing page giới thiệu sách chuyên nghiệp
     ├── landing-page-cg-lms/     # ⭐ ĐỒ ÁN CAPSTONE: Landing page khóa học Bootcamp CodeGym
     ├── card-list-flexbox/       # Lưới danh sách thẻ card linh hoạt bằng CSS Flexbox
     ├── survey-market-research/  # Form khảo sát nghiên cứu thị trường chuyên sâu

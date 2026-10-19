@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kiến Trúc Web Hiện Đại | Sách Lập Trình & Thiết Kế Web Bestseller</title>
+    
+    <!-- Meta SEO & Open Graph -->
+    <meta name="description" content="Trang giới thiệu chính thức cuốn sách 'Kiến Trúc Web Hiện Đại: Từ Số 0 Đến Tech Lead'. Khám phá toàn diện HTML5, CSS3, Bootstrap 5, JavaScript và tư duy kiến trúc giao diện thực chiến.">
+    <meta name="keywords" content="sách lập trình, kiến trúc web, bootstrap 5, html5, css3, javascript, codegym, frontend developer, landing page">
+    <meta name="author" content="Thào Quang Vinh / TechMastery Press">
+    <meta property="og:title" content="Kiến Trúc Web Hiện Đại | Cẩm Nang Toàn Diện Cho Web Developer">
+    <meta property="og:description" content="Tải đọc thử miễn phí 3 chương đầu. Đặt mua ngay hôm nay để nhận trọn bộ mã nguồn 50+ dự án thực tế.">
+    <meta property="og:type" content="book">
+
+    <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome 6.5.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100" tabindex="0">
+
+    <!-- ========================================================
+         1. HEADER & NAVIGATION BAR
+         ======================================================== -->
+    <header class="header-section" id="header">
+        <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top modern-navbar">
+            <div class="container">
+                <!-- Brand Logo -->
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#overview">
+                    <div class="brand-icon-box">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                    </div>
+                    <div class="brand-text-group">
+                        <span class="brand-name">Tech<span class="text-accent">Book</span></span>
+                        <span class="brand-tag">Mastery Press</span>
+                    </div>
+                </a>
+
+                <!-- Mobile Hamburger Toggler -->
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainContent" aria-controls="navbarMainContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-bar bar-1"></span>
+                    <span class="toggler-bar bar-2"></span>
+                    <span class="toggler-bar bar-3"></span>
+                </button>
+
+                <!-- Navigation Links & Actions -->
+                <div class="collapse navbar-collapse" id="navbarMainContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#overview"><i class="fa-solid fa-house-chimney me-1"></i> Tổng Quan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#author"><i class="fa-solid fa-user-tie me-1"></i> Tác Giả</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#features"><i class="fa-solid fa-sparkles me-1"></i> Điểm Nổi Bật</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#chapters"><i class="fa-solid fa-list-check me-1"></i> Mục Lục</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#prices"><i class="fa-solid fa-tags me-1"></i> Bảng Giá</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#download"><i class="fa-solid fa-cloud-arrow-down me-1"></i> Đọc Thử</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#readers-say"><i class="fa-solid fa-comments me-1"></i> Độc Giả Nói</a>
+                        </li>
+                    </ul>
+
+                    <!-- Action Buttons -->
+                    <div class="d-flex align-items-center gap-2 nav-actions-wrapper">
+                        <!-- Theme Toggle Button -->
+                        <button class="btn theme-toggle-btn" id="themeToggleBtn" type="button" title="Chuyển chế độ Sáng / Tối" aria-label="Toggle Theme">
+                            <i class="fa-solid fa-moon icon-dark"></i>
+                            <i class="fa-solid fa-sun icon-light"></i>
+                        </button>
+
+                        <!-- Order CTA Button -->
+                        <button class="btn btn-order-nav" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-edition="paperback">
+                            <i class="fa-solid fa-bag-shopping me-1"></i> Đặt Sách Ngay
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ========================================================
+             2. BOOK OVERVIEW (HERO SECTION)
+             ======================================================== -->
+        <section class="overview-section" id="overview">
+            <div class="ambient-glow glow-1"></div>
+            <div class="ambient-glow glow-2"></div>
+            <div class="container position-relative">
+                <div class="row align-items-center gy-5">
+                    <!-- Left Column: Copywriting & Actions -->
+                    <div class="col-lg-7 text-start">
+                        <div class="badge-pill mb-3">
+                            <span class="badge-dot"></span>
+                            <span class="badge-text"><i class="fa-solid fa-fire text-danger me-1"></i> #1 Bestseller Sách Công Nghệ 2026</span>
+                            <span class="badge-sub">Tái bản lần 5</span>
+                        </div>
+
+                        <h1 class="hero-title mb-3">
+                            Kiến Trúc Web Hiện Đại
+                            <span class="d-block text-gradient">Từ Số 0 Đến Tech Lead</span>
+                        </h1>
+
+                        <p class="hero-subtitle mb-4">
+                            Cẩm nang toàn diện và thực chiến nhất về <strong>HTML5, CSS3 hiện đại, Bootstrap 5</strong> và <strong>JavaScript chuyên sâu</strong>. Thiết kế chuẩn chỉnh giao diện responsive, tối ưu UX/UI và xây dựng nền tảng tư duy kỹ sư phần mềm vững chắc.
+                        </p>
+
+                        <!-- Quick Reviews & Star Rating -->
+                        <div class="rating-strip mb-4 d-flex align-items-center flex-wrap gap-3">
+                            <div class="stars-group text-warning">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <span class="rating-score fw-bold">4.95 / 5.0</span>
+                            <span class="rating-divider">|</span>
+                            <span class="rating-count text-muted"><i class="fa-solid fa-user-check text-success me-1"></i> 2,840+ Độc giả đã đánh giá</span>
+                        </div>
+
+                        <!-- CTA Action Buttons -->
+                        <div class="d-flex flex-wrap gap-3 mb-5 hero-cta-group">
+                            <button class="btn btn-primary-gradient btn-lg shadow-glow" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-edition="paperback">
+                                <i class="fa-solid fa-cart-shopping me-2"></i> Mua Sách Ngay <span class="badge bg-light text-dark ms-2 fw-semibold">-30%</span>
+                            </button>
+                            <a href="#download" class="btn btn-outline-modern btn-lg">
+                                <i class="fa-solid fa-file-pdf me-2 text-danger"></i> Đọc Thử Miễn Phí
+                            </a>
+                            <button class="btn btn-subtle-preview btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#previewModal">
+                                <i class="fa-regular fa-eye me-2 text-info"></i> Xem Mục Lục Mini
+                            </button>
+                        </div>
+
+                        <!-- Highlights Quick Stats Grid -->
+                        <div class="row g-3 stats-strip pt-3 border-top">
+                            <div class="col-6 col-sm-3">
+                                <div class="stat-card">
+                                    <span class="stat-number">480+</span>
+                                    <span class="stat-label">Trang in màu cao cấp</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <div class="stat-card">
+                                    <span class="stat-number">24</span>
+                                    <span class="stat-label">Chương thực chiến</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <div class="stat-card">
+                                    <span class="stat-number">50+</span>
+                                    <span class="stat-label">Source code dự án</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <div class="stat-card">
+                                    <span class="stat-number">15K+</span>
+                                    <span class="stat-label">Bản đã phát hành</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: 3D Realistic Interactive Book Mockup -->
+                    <div class="col-lg-5 text-center">
+                        <div class="book-stage">
+                            <!-- Floating badges around book -->
+                            <div class="floating-chip chip-top-right">
+                                <i class="fa-solid fa-code me-1 text-primary"></i> 100% Thực hành Code
+                            </div>
+                            <div class="floating-chip chip-bottom-left">
+                                <i class="fa-solid fa-gift me-1 text-warning"></i> Kèm 8 Mini Projects
+                            </div>
+
+                            <!-- 3D Book Container -->
+                            <div class="book-3d-wrapper" id="interactiveBook" title="Di chuột để xoay 3D">
+                                <div class="book-3d">
+                                    <!-- Book Front Cover -->
+                                    <div class="book-cover-front">
+                                        <div class="cover-inner">
+                                            <div class="cover-header">
+                                                <div class="cover-badge"><i class="fa-solid fa-award"></i> BESTSELLER 2026</div>
+                                                <span class="cover-publisher">TECHMASTERY PRESS</span>
+                                            </div>
+                                            <div class="cover-center">
+                                                <div class="cover-tech-icon">
+                                                    <i class="fa-brands fa-bootstrap"></i>
+                                                </div>
+                                                <h2 class="cover-book-title">KIẾN TRÚC<br><span>WEB HIỆN ĐẠI</span></h2>
+                                                <p class="cover-book-sub">TỪ SỐ 0 ĐẾN TECH LEAD</p>
+                                                <div class="cover-pills">
+                                                    <span>HTML5</span>
+                                                    <span>CSS3</span>
+                                                    <span>BOOTSTRAP 5</span>
+                                                    <span>JS</span>
+                                                </div>
+                                            </div>
+                                            <div class="cover-footer">
+                                                <div class="cover-author">
+                                                    <small>TÁC GIẢ</small>
+                                                    <strong>Thào Quang Vinh</strong>
+                                                </div>
+                                                <div class="cover-seal">
+                                                    <i class="fa-solid fa-shield-halved"></i>
+                                                    <span>OFFICIAL</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Book Spine (Gáy sách) -->
+                                    <div class="book-spine">
+                                        <span class="spine-title">KIẾN TRÚC WEB HIỆN ĐẠI • THÀO QUANG VINH</span>
+                                    </div>
+                                    <!-- Book Pages Edge (Mép trang sách) -->
+                                    <div class="book-pages-edge"></div>
+                                    <!-- Book Back Cover -->
+                                    <div class="book-cover-back"></div>
+                                </div>
+                            </div>
+                            <!-- Shadow under book -->
+                            <div class="book-ground-shadow"></div>
+                            <p class="text-muted small mt-3"><i class="fa-solid fa-arrows-up-down-left-right me-1"></i> Rê chuột qua sách để xem hiệu ứng 3D thực tế</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             3. AUTHOR SECTION
+             ======================================================== -->
+        <section class="author-section py-5 position-relative" id="author">
+            <div class="container py-lg-4">
+                <div class="section-badge-header text-center mb-5">
+                    <span class="section-tag"><i class="fa-solid fa-feather-pointed me-1"></i> NGƯỜI TRUYỀN CẢM HỨNG</span>
+                    <h2 class="section-title">Về Tác Giả & Sứ Mệnh Cuốn Sách</h2>
+                    <div class="section-divider mx-auto"></div>
+                    <p class="section-desc">Gặp gỡ tác giả đằng sau cẩm nang lập trình web hàng đầu được cộng đồng tin tưởng</p>
+                </div>
+
+                <div class="row align-items-center gy-4">
+                    <!-- Author Portrait Column -->
+                    <div class="col-lg-5 text-center">
+                        <div class="author-card-wrapper position-relative mx-auto">
+                            <div class="author-avatar-box">
+                                <!-- Vector SVG Illustrated Tech Founder Avatar -->
+                                <div class="author-avatar-svg">
+                                    <div class="author-avatar-inner">
+                                        <div class="author-icon-circle">
+                                            <i class="fa-solid fa-user-astronaut"></i>
+                                        </div>
+                                        <div class="author-role-badge">
+                                            <i class="fa-solid fa-circle-check text-success me-1"></i> Verified Author
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="author-exp-badge">
+                                <span class="exp-num">12+</span>
+                                <span class="exp-text">Năm kinh nghiệm thực chiến</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Author Details Column -->
+                    <div class="col-lg-7">
+                        <div class="author-bio-content ps-lg-4">
+                            <div class="d-flex align-items-center gap-3 mb-2 flex-wrap">
+                                <h3 class="author-name mb-0">Thào Quang Vinh</h3>
+                                <span class="author-title-pill">Principal Engineer & Web Educator</span>
+                            </div>
+                            <p class="author-meta text-muted mb-4">
+                                <i class="fa-solid fa-building me-1 text-primary"></i> Senior Frontend Architect & Giảng viên Đào tạo Công Nghệ tại CodeGym
+                            </p>
+
+                            <blockquote class="author-quote mb-4">
+                                <i class="fa-solid fa-quote-left quote-mark me-2"></i>
+                                <span>Lập trình giao diện web hiện đại không dừng lại ở việc gõ cho chạy được một thẻ HTML hay một dòng CSS. Đó là nghệ thuật kết hợp giữa tư duy cấu trúc logic, trải nghiệm người dùng tinh tế và kiến trúc mã nguồn bền vững theo thời gian.</span>
+                            </blockquote>
+
+                            <p class="author-narrative mb-4">
+                                Với hơn 12 năm chinh chiến qua hàng chục dự án phần mềm quy mô lớn và đồng hành hướng dẫn hơn <strong>5,000+ lập trình viên trẻ</strong> bước vào ngành, tác giả đúc kết toàn bộ bí quyết, bẫy lỗi thường gặp và các chuẩn mực thiết kế tối ưu nhất vào cuốn sách này.
+                            </p>
+
+                            <!-- Milestones / Achievements Grid -->
+                            <div class="row g-3 mb-4 author-achievements">
+                                <div class="col-sm-6">
+                                    <div class="achievement-item d-flex align-items-center gap-3">
+                                        <div class="achieve-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                        <div>
+                                            <h5 class="mb-0 fw-bold">25,000+</h5>
+                                            <span class="text-muted small">Học viên trực tuyến & Offline</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="achievement-item d-flex align-items-center gap-3">
+                                        <div class="achieve-icon"><i class="fa-solid fa-book"></i></div>
+                                        <div>
+                                            <h5 class="mb-0 fw-bold">3 Đầu Sách</h5>
+                                            <span class="text-muted small">Bestseller ngành Công Nghệ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="achievement-item d-flex align-items-center gap-3">
+                                        <div class="achieve-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+                                        <div>
+                                            <h5 class="mb-0 fw-bold">50+ Hội Thảo</h5>
+                                            <span class="text-muted small">Diễn giả Tech Summit & Meetup</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="achievement-item d-flex align-items-center gap-3">
+                                        <div class="achieve-icon"><i class="fa-brands fa-github"></i></div>
+                                        <div>
+                                            <h5 class="mb-0 fw-bold">10K+ Stars</h5>
+                                            <span class="text-muted small">Các kho mã nguồn mã nguồn mở</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Author Social Links -->
+                            <div class="d-flex align-items-center gap-3 author-socials">
+                                <span class="fw-semibold text-muted">Kết nối với tác giả:</span>
+                                <a href="https://github.com/vinhdev" target="_blank" class="social-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://linkedin.com" target="_blank" class="social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://facebook.com" target="_blank" class="social-btn" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://youtube.com" target="_blank" class="social-btn" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="mailto:contact@vinhdev.edu.vn" class="social-btn" title="Email"><i class="fa-regular fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             4. FEATURES SECTION (ĐẶC ĐIỂM NỔI BẬT & MỤC LỤC)
+             ======================================================== -->
+        <section class="features-section py-5" id="features">
+            <div class="container py-lg-4">
+                <div class="section-badge-header text-center mb-5">
+                    <span class="section-tag"><i class="fa-solid fa-cube me-1"></i> GIÁ TRỊ VƯỢT TRỘI</span>
+                    <h2 class="section-title">Tại Sao Cuốn Sách Này Khác Biệt?</h2>
+                    <div class="section-divider mx-auto"></div>
+                    <p class="section-desc">Không chỉ lý thuyết suông — đây là cẩm nang chiến đấu thực địa giúp bạn nâng trình lập trình web rõ rệt sau từng chương</p>
+                </div>
+
+                <!-- 6 Core Features Grid -->
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card h-100">
+                            <div class="feature-icon-wrapper icon-gradient-1">
+                                <i class="fa-solid fa-code-merge"></i>
+                            </div>
+                            <h4 class="feature-card-title">Lộ Trình Từng Bước Vững Chắc</h4>
+                            <p class="feature-card-desc">Thiết kế logic từ bản chất trình duyệt, Semantic HTML5, cấu trúc CSS phân lớp cho đến hệ thống grid Bootstrap 5 hiện đại.</p>
+                            <span class="feature-card-tag"><i class="fa-solid fa-check me-1"></i> Zero to Hero</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card h-100">
+                            <div class="feature-icon-wrapper icon-gradient-2">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+                            <h4 class="feature-card-title">100% Chuẩn Responsive Đa Nền Tảng</h4>
+                            <p class="feature-card-desc">Bí quyết phối hợp Flexbox, CSS Grid và Bootstrap Breakpoints chuẩn mực. Đảm bảo giao diện hiển thị xuất sắc từ Smartphone đến màn hình 4K.</p>
+                            <span class="feature-card-tag"><i class="fa-solid fa-check me-1"></i> Mobile First Standard</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card h-100">
+                            <div class="feature-icon-wrapper icon-gradient-3">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </div>
+                            <h4 class="feature-card-title">Thẩm Mỹ Hiện Đại Chuẩn UI/UX</h4>
+                            <p class="feature-card-desc">Học cách sử dụng bảng màu nghệ thuật, Glassmorphism, Micro-animations và phân cấp thị giác (Visual Hierarchy) thu hút độc giả.</p>
+                            <span class="feature-card-tag"><i class="fa-solid fa-check me-1"></i> High Polish Design</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card h-100">
+                            <div class="feature-icon-wrapper icon-gradient-4">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <h4 class="feature-card-title">50+ Kho Mã Nguồn Thực Tế</h4>
+                            <p class="feature-card-desc">Mỗi bài học đều đi kèm kho GitHub Repo hoàn chỉnh, chú thích chi tiết từng dòng lệnh, sẵn sàng tái sử dụng cho đồ án và công việc.</p>
+                            <span class="feature-card-tag"><i class="fa-solid fa-check me-1"></i> Clean Code & Git Ready</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card h-100">
+                            <div class="feature-icon-wrapper icon-gradient-5">
+                                <i class="fa-solid fa-gauge-high"></i>
+                            </div>
+                            <h4 class="feature-card-title">Tối Ưu Tốc Độ & SEO Top 1</h4>
+                            <p class="feature-card-desc">Kỹ thuật tối ưu điểm Google Lighthouse 100/100, nén hình ảnh WebP/AVIF, cấu trúc thẻ meta Open Graph và Semantic Rich Snippets.</p>
+                            <span class="feature-card-tag"><i class="fa-solid fa-check me-1"></i> Google 100 Scores</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card h-100">
+                            <div class="feature-icon-wrapper icon-gradient-6">
+                                <i class="fa-solid fa-users-gear"></i>
+                            </div>
+                            <h4 class="feature-card-title">Cộng Đồng Độc Giả Độc Quyền</h4>
+                            <p class="feature-card-desc">Tham gia nhóm kín Discord & Facebook hỗ trợ giải đáp thắc mắc trực tiếp cùng tác giả, tham gia webinar định hướng nghề nghiệp hàng tháng.</p>
+                            <span class="feature-card-tag"><i class="fa-solid fa-check me-1"></i> Trọn Đời Miễn Phí</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CHAPTERS / TABLE OF CONTENTS ACCORDION (MỤC LỤC SÁCH) -->
+                <div class="chapters-wrapper mt-5 pt-4" id="chapters">
+                    <div class="text-center mb-4">
+                        <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-semibold"><i class="fa-solid fa-book-open me-1"></i> CHI TIẾT NỘI DUNG</span>
+                        <h3 class="mt-2 fw-bold">Khám Phá 5 Phần & 24 Chương Đỉnh Cao</h3>
+                        <p class="text-muted">Nhấp vào từng phần để xem mục lục chi tiết và thời lượng học tập ước tính</p>
+                    </div>
+
+                    <div class="accordion modern-accordion" id="accordionBookChapters">
+                        <!-- Part 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <div class="d-flex align-items-center justify-content-between w-100 me-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <span class="part-badge">PHẦN 1</span>
+                                            <span class="part-title fw-bold">Nền Tảng Vững Chắc: Kiến Trúc Web & Semantic HTML5</span>
+                                        </div>
+                                        <span class="badge bg-secondary-subtle text-secondary d-none d-sm-inline-block">Chương 1 — 4 • 90 Trang</span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionBookChapters">
+                                <div class="accordion-body">
+                                    <ul class="chapter-list list-unstyled mb-0">
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 1:</strong> Bức tranh toàn cảnh về cách trình duyệt render web (DOM, CSSOM, Render Tree).</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 2:</strong> HTML5 ngữ nghĩa chuẩn SEO (Semantic Elements: header, nav, main, article, section, footer).</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 3:</strong> Xây dựng biểu mẫu hiện đại (HTML5 Forms Validation, Accessibility ARIA).</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 4:</strong> Lab thực hành 1: Thiết kế trang báo chí chuẩn SEO phong cách The New York Times.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Part 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <div class="d-flex align-items-center justify-content-between w-100 me-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <span class="part-badge">PHẦN 2</span>
+                                            <span class="part-title fw-bold">Nghệ Thuật Bố Cục: CSS3, Flexbox & CSS Grid Mastery</span>
+                                        </div>
+                                        <span class="badge bg-secondary-subtle text-secondary d-none d-sm-inline-block">Chương 5 — 9 • 110 Trang</span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionBookChapters">
+                                <div class="accordion-body">
+                                    <ul class="chapter-list list-unstyled mb-0">
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 5:</strong> Box Model chuyên sâu, Margin Collapsing và căn giữa tuyệt đối trong CSS.</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 6:</strong> Làm chủ Flexbox toàn tập: Trục chính (Main Axis), Trục phụ (Cross Axis), flex-grow & shrink.</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 7:</strong> Đột phá bố cục phức tạp với CSS Grid Layout 2 chiều.</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 8:</strong> CSS Variables, Dark Mode và hệ thống Design Tokens có khả năng mở rộng.</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 9:</strong> Lab thực hành 2: Xây dựng Music Player UI phong cách Emerald Glassmorphism.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Part 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <div class="d-flex align-items-center justify-content-between w-100 me-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <span class="part-badge">PHẦN 3</span>
+                                            <span class="part-title fw-bold">Chiến Binh Bootstrap 5: Thiết Kế Responsive Thần Tốc</span>
+                                        </div>
+                                        <span class="badge bg-secondary-subtle text-secondary d-none d-sm-inline-block">Chương 10 — 14 • 105 Trang</span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionBookChapters">
+                                <div class="accordion-body">
+                                    <ul class="chapter-list list-unstyled mb-0">
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 10:</strong> Hệ thống Grid 12 cột, Breakpoints và Container Fluid của Bootstrap 5.</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 11:</strong> Bộ linh kiện (Components): Navbar, Hero, Cards, Modals, Offcanvas, Accordion.</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 12:</strong> Tùy biến biến SCSS Bootstrap, mở rộng Utility API không giới hạn.</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 13:</strong> Form validation tự động và tương tác thông minh qua Bootstrap JS.</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 14:</strong> Lab thực hành 3: Xây dựng Landing Page tuyển sinh Coding Bootcamp hoàn chỉnh.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Part 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <div class="d-flex align-items-center justify-content-between w-100 me-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <span class="part-badge">PHẦN 4</span>
+                                            <span class="part-title fw-bold">Linh Hồn Trang Web: Tương Tác Với JavaScript Hiện Đại</span>
+                                        </div>
+                                        <span class="badge bg-secondary-subtle text-secondary d-none d-sm-inline-block">Chương 15 — 19 • 100 Trang</span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionBookChapters">
+                                <div class="accordion-body">
+                                    <ul class="chapter-list list-unstyled mb-0">
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 15:</strong> Thao tác DOM siêu tốc, Event Delegation và xử lý sự kiện mượt mà.</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 16:</strong> LocalStorage, SessionStorage và lưu trữ trạng thái người dùng.</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 17:</strong> Fetch API, async/await và render dữ liệu động vào giao diện.</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 18:</strong> Animation vi diệu với IntersectionObserver API và GSAP.</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 19:</strong> Lab thực hành 4: Xây dựng Web App Giỏ hàng & Thanh toán thời gian thực.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Part 5 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <div class="d-flex align-items-center justify-content-between w-100 me-3">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <span class="part-badge">PHẦN 5</span>
+                                            <span class="part-title fw-bold">Trưởng Thành Nghề Nghiệp: Performance, CI/CD & Tech Lead Mindset</span>
+                                        </div>
+                                        <span class="badge bg-secondary-subtle text-secondary d-none d-sm-inline-block">Chương 20 — 24 • 75 Trang</span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionBookChapters">
+                                <div class="accordion-body">
+                                    <ul class="chapter-list list-unstyled mb-0">
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 20:</strong> Tối ưu hiệu năng Core Web Vitals (LCP, FID, CLS).</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 21:</strong> Bảo mật ứng dụng Web cơ bản (XSS, CSRF, CSP headers).</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 22:</strong> Tự động hóa xuất bản Web lên GitHub Pages, Netlify & Vercel.</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 23:</strong> Tư duy kiến trúc của một Tech Lead: Viết mã nguồn sạch và tái sử dụng.</li>
+                                        <li><i class="fa-solid fa-circle-play text-primary me-2"></i> <strong>Chương 24:</strong> Đồ án tốt nghiệp: Xây dựng toàn bộ hệ thống Web Portfolio cá nhân đẳng cấp.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             5. PRICES SECTION (BẢNG GIÁ & CÁC PHIÊN BẢN SÁCH)
+             ======================================================== -->
+        <section class="prices-section py-5 position-relative" id="prices">
+            <div class="container py-lg-4">
+                <div class="section-badge-header text-center mb-5">
+                    <span class="section-tag"><i class="fa-solid fa-tag me-1"></i> ĐẦU TƯ CHO TƯƠNG LAI</span>
+                    <h2 class="section-title">Lựa Chọn Phiên Bản Phù Hợp Với Bạn</h2>
+                    <div class="section-divider mx-auto"></div>
+                    <p class="section-desc">Mức giá ưu đãi đặc biệt trong đợt phát hành mới — Đảm bảo hoàn tiền 100% trong 14 ngày nếu không hài lòng</p>
+                </div>
+
+                <!-- 3 Pricing Cards -->
+                <div class="row g-4 align-items-stretch justify-content-center">
+                    <!-- Plan 1: E-Book -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="pricing-card h-100 d-flex flex-column">
+                            <div class="pricing-header">
+                                <span class="edition-type text-muted fw-bold">BẢN ĐIỆN TỬ</span>
+                                <h3 class="plan-name">E-Book Standard</h3>
+                                <p class="plan-tagline text-muted">Lựa chọn tiết kiệm, học tập linh hoạt trên điện thoại, máy tính bảng và Kindle.</p>
+                                <div class="price-box">
+                                    <span class="price-currency">VNĐ</span>
+                                    <span class="price-amount">199.000</span>
+                                    <span class="price-original">290.000đ</span>
+                                </div>
+                                <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill small">Tiết kiệm 31%</span>
+                            </div>
+
+                            <div class="pricing-body flex-grow-1">
+                                <ul class="features-list list-unstyled">
+                                    <li><i class="fa-solid fa-check text-success me-2"></i> Trọn bộ file PDF + EPUB + MOBI chất lượng cao</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i> Đọc mượt mà trên mọi thiết bị cá nhân</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i> Tải kho GitHub 50+ Source Code mẫu</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i> Tham gia Discord cộng đồng độc giả</li>
+                                    <li class="text-muted"><i class="fa-solid fa-xmark text-muted me-2"></i> <s>Không kèm sách in vật lý</s></li>
+                                    <li class="text-muted"><i class="fa-solid fa-xmark text-muted me-2"></i> <s>Không kèm vé Workshop Tech Lead</s></li>
+                                </ul>
+                            </div>
+
+                            <div class="pricing-footer pt-3">
+                                <button class="btn btn-outline-primary w-100 py-3 fw-bold" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-edition="ebook">
+                                    <i class="fa-solid fa-download me-2"></i> Đặt Mua E-Book
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plan 2: Paperback (Most Popular / Highlighted) -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="pricing-card pricing-card-featured h-100 d-flex flex-column position-relative shadow-lg">
+                            <!-- Popular Ribbon -->
+                            <div class="popular-ribbon">
+                                <i class="fa-solid fa-crown me-1"></i> BÁN CHẠY NHẤT
+                            </div>
+
+                            <div class="pricing-header">
+                                <span class="edition-type text-primary fw-bold">SÁCH IN BÌA MỀM</span>
+                                <h3 class="plan-name">Paperback Deluxe</h3>
+                                <p class="plan-tagline text-muted">Trải nghiệm đọc giấy thật cao cấp, kèm quà tặng độc quyền và trọn bộ E-Book.</p>
+                                <div class="price-box">
+                                    <span class="price-currency">VNĐ</span>
+                                    <span class="price-amount">349.000</span>
+                                    <span class="price-original">499.000đ</span>
+                                </div>
+                                <span class="badge bg-danger text-white px-3 py-1 rounded-pill small">Giảm sốc 30% hôm nay</span>
+                            </div>
+
+                            <div class="pricing-body flex-grow-1">
+                                <ul class="features-list list-unstyled">
+                                    <li><i class="fa-solid fa-check text-success me-2"></i> <strong>Sách in màu cao cấp 480 trang</strong> giấy xốp nhẹ bảo vệ mắt</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i> <strong>Tặng trọn bộ E-Book</strong> PDF & EPUB trị giá 199.000đ</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i> <strong>Miễn phí vận chuyển</strong> toàn quốc (Freeship COD)</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i> <strong>Bộ Bookmark kim loại</strong> & Postcard phong cách Tech</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i> Toàn bộ 50+ Source Code dự án chuẩn Git</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i> Tham gia kênh hỗ trợ độc quyền cùng tác giả</li>
+                                </ul>
+                            </div>
+
+                            <div class="pricing-footer pt-3">
+                                <button class="btn btn-primary-gradient w-100 py-3 fw-bold shadow-glow" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-edition="paperback">
+                                    <i class="fa-solid fa-cart-shopping me-2"></i> Đặt Mua Sách Bìa Mềm
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plan 3: Hardcover Collector Boxset -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="pricing-card h-100 d-flex flex-column">
+                            <div class="pricing-header">
+                                <span class="edition-type text-warning fw-bold">BẢN GIỚI HẠN SƯU TẦM</span>
+                                <h3 class="plan-name">Hardcover VIP Box</h3>
+                                <p class="plan-tagline text-muted">Bìa cứng mạ vàng sang trọng, có chữ ký tác giả và quyền lợi kết nối 1-1.</p>
+                                <div class="price-box">
+                                    <span class="price-currency">VNĐ</span>
+                                    <span class="price-amount">599.000</span>
+                                    <span class="price-original">850.000đ</span>
+                                </div>
+                                <span class="badge bg-warning-subtle text-dark px-3 py-1 rounded-pill small">Chỉ còn 45 hộp</span>
+                            </div>
+
+                            <div class="pricing-body flex-grow-1">
+                                <ul class="features-list list-unstyled">
+                                    <li><i class="fa-solid fa-check text-success me-2"></i> <strong>Bìa cứng dập nổi kim loại</strong>, chữ ký viết tay tác giả</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i> <strong>Hộp quà Collector Boxset</strong> thiết kế phong cách Cyberpunk</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i> <strong>Áo thun Tech Developer</strong> độc quyền</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i> <strong>1 Vé Workshop Online trực tiếp</strong>: Tư Duy Kiến Trúc Web</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i> <strong>Phiên 1-1 Code Review 45 phút</strong> trực tiếp cùng tác giả</li>
+                                    <li><i class="fa-solid fa-check text-success me-2"></i> Toàn bộ quyền lợi của bản Paperback & E-Book</li>
+                                </ul>
+                            </div>
+
+                            <div class="pricing-footer pt-3">
+                                <button class="btn btn-outline-warning w-100 py-3 fw-bold" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-edition="hardcover">
+                                    <i class="fa-solid fa-gift me-2"></i> Đặt Mua Bản Giới Hạn
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guarantee Banner -->
+                <div class="guarantee-box text-center mt-5 p-4 rounded-4 border bg-body-tertiary">
+                    <div class="row align-items-center justify-content-center g-3">
+                        <div class="col-auto">
+                            <i class="fa-solid fa-shield-heart fa-2x text-primary"></i>
+                        </div>
+                        <div class="col-md-9 text-md-start">
+                            <h5 class="mb-1 fw-bold">Cam Kết Hài Lòng 100% — Đổi Trả Miễn Phí Trong 14 Ngày</h5>
+                            <p class="text-muted mb-0 small">Nếu sách có bất kỳ lỗi in ấn hoặc bạn cảm thấy nội dung không mang lại giá trị tương xứng, chúng tôi sẽ hoàn trả 100% tiền không cần bất kỳ lý do gì.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             6. DOWNLOAD SECTION (TẢI BẢN ĐỌC THỬ MIỄN PHÍ)
+             ======================================================== -->
+        <section class="download-section py-5 position-relative" id="download">
+            <div class="container py-lg-4">
+                <div class="download-banner-card p-4 p-lg-5 rounded-4 shadow-lg">
+                    <div class="row align-items-center gy-4">
+                        <!-- Text & Value Props -->
+                        <div class="col-lg-6">
+                            <span class="badge bg-danger-subtle text-danger px-3 py-2 rounded-pill fw-semibold mb-3">
+                                <i class="fa-solid fa-bolt me-1"></i> TẢI NGAY TRONG 30 GIÂY
+                            </span>
+                            <h2 class="display-6 fw-bold mb-3">Tải Đọc Thử Miễn Phí<br><span class="text-gradient">3 Chương Đầu Tiên (120 Trang)</span></h2>
+                            <p class="lead-text text-muted mb-4">
+                                Bạn chưa chắc chắn cuốn sách có phù hợp với trình độ của mình? Hãy trải nghiệm hoàn toàn miễn phí trọn vẹn 3 chương đầu tiên kèm toàn bộ mã nguồn thực hành.
+                            </p>
+
+                            <div class="download-benefits mb-4">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-circle-check text-success"></i>
+                                    <span>Đầy đủ 120 trang nội dung chất lượng cao, không cắt bớt</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-circle-check text-success"></i>
+                                    <span>Tặng kèm file mã nguồn mẫu cho bài thực hành chương 3</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-success"></i>
+                                    <span>Không cần thẻ ngân hàng, link tải gửi trực tiếp qua Email</span>
+                                </div>
+                            </div>
+
+                            <!-- Reading Apps Compatibility Badges -->
+                            <div class="apps-compat d-flex align-items-center gap-3 flex-wrap pt-2">
+                                <span class="small text-muted fw-semibold">Tương thích hoàn hảo:</span>
+                                <span class="badge bg-body border text-body"><i class="fa-solid fa-file-pdf text-danger me-1"></i> Adobe PDF</span>
+                                <span class="badge bg-body border text-body"><i class="fa-brands fa-apple text-dark me-1"></i> Apple Books</span>
+                                <span class="badge bg-body border text-body"><i class="fa-brands fa-amazon text-warning me-1"></i> Kindle</span>
+                                <span class="badge bg-body border text-body"><i class="fa-brands fa-google-play text-primary me-1"></i> Google Play</span>
+                            </div>
+                        </div>
+
+                        <!-- Form Column -->
+                        <div class="col-lg-6">
+                            <div class="download-form-card p-4 rounded-4 bg-body border shadow-sm">
+                                <h4 class="fw-bold mb-1"><i class="fa-solid fa-inbox text-primary me-2"></i> Điền Thông Tin Nhận Sách</h4>
+                                <p class="text-muted small mb-3">Hệ thống sẽ gửi file bản đọc thử và kho mã nguồn đến hộp thư của bạn.</p>
+
+                                <form id="downloadForm" novalidate>
+                                    <div class="mb-3">
+                                        <label for="downloadName" class="form-label fw-semibold">Họ và tên của bạn <span class="text-danger">*</span></label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fa-regular fa-user"></i></span>
+                                            <input type="text" class="form-control" id="downloadName" placeholder="Ví dụ: Nguyễn Văn A" required>
+                                        </div>
+                                        <div class="invalid-feedback">Vui lòng nhập họ và tên của bạn.</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="downloadEmail" class="form-label fw-semibold">Địa chỉ Email nhận sách <span class="text-danger">*</span></label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fa-regular fa-envelope"></i></span>
+                                            <input type="email" class="form-control" id="downloadEmail" placeholder="emailcua-ban@example.com" required>
+                                        </div>
+                                        <div class="invalid-feedback">Vui lòng nhập địa chỉ email hợp lệ.</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">Định dạng bạn muốn nhận:</label>
+                                        <div class="d-flex gap-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="bookFormat" id="formatPdf" value="pdf" checked>
+                                                <label class="form-check-label" for="formatPdf">
+                                                    PDF (In ấn & Laptop)
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="bookFormat" id="formatEpub" value="epub">
+                                                <label class="form-check-label" for="formatEpub">
+                                                    EPUB (Máy đọc sách)
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary-gradient w-100 py-3 fw-bold shadow-glow" id="downloadSubmitBtn">
+                                        <i class="fa-solid fa-paper-plane me-2"></i> Gửi Bản Đọc Thử Cho Tôi Ngay
+                                    </button>
+
+                                    <!-- Quick Download Trigger (Mock Direct Download) -->
+                                    <div class="text-center mt-3">
+                                        <a href="#" id="directDownloadLink" class="text-decoration-none small text-muted">
+                                            <i class="fa-solid fa-cloud-arrow-down me-1"></i> Hoặc tải trực tiếp ngay về máy (Bản rút gọn PDF 25MB)
+                                        </a>
+                                    </div>
+                                </form>
+
+                                <!-- Success Alert Container -->
+                                <div class="alert alert-success mt-3 d-none align-items-center gap-2" id="downloadSuccessAlert" role="alert">
+                                    <i class="fa-solid fa-circle-check fs-4"></i>
+                                    <div>
+                                        <strong>Đã gửi thành công!</strong> Kiểm tra hộp thư của bạn (kể cả mục Spam) để tải bản đọc thử ngay nhé!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             7. READER’S SAY (ĐÁNH GIÁ CỦA ĐỘC GIẢ)
+             ======================================================== -->
+        <section class="readers-section py-5" id="readers-say">
+            <div class="container py-lg-4">
+                <div class="section-badge-header text-center mb-5">
+                    <span class="section-tag"><i class="fa-solid fa-comments me-1"></i> PHẢN HỒI THỰC TẾ</span>
+                    <h2 class="section-title">Độc Giả & Chuyên Gia Nói Gì?</h2>
+                    <div class="section-divider mx-auto"></div>
+                    <p class="section-desc">Hơn 2,800+ kỹ sư, học viên và chuyên gia công nghệ đã đọc và ứng dụng thành công trong công việc thực tế</p>
+                </div>
+
+                <!-- Testimonial Overall Stats Box -->
+                <div class="review-stats-card p-4 rounded-4 bg-body border mb-5 shadow-sm">
+                    <div class="row align-items-center gy-3 text-center text-md-start">
+                        <div class="col-md-3 text-center border-end-md">
+                            <div class="overall-rating-number text-gradient fw-bolder">4.95</div>
+                            <div class="stars-group text-warning mb-1">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-muted small">Dựa trên 2,840+ đánh giá</span>
+                        </div>
+                        <div class="col-md-6 px-lg-4">
+                            <!-- Progress Bars for Ratings -->
+                            <div class="d-flex align-items-center gap-2 mb-1">
+                                <span class="small text-muted" style="width: 45px;">5 sao</span>
+                                <div class="progress flex-grow-1" style="height: 8px;">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 94%;" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span class="small text-muted" style="width: 40px;">94%</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 mb-1">
+                                <span class="small text-muted" style="width: 45px;">4 sao</span>
+                                <div class="progress flex-grow-1" style="height: 8px;">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 5%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span class="small text-muted" style="width: 40px;">5%</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="small text-muted" style="width: 45px;">3 sao</span>
+                                <div class="progress flex-grow-1" style="height: 8px;">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 1%;" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span class="small text-muted" style="width: 40px;">1%</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#reviewModal">
+                                <i class="fa-solid fa-pen-to-square me-1"></i> Viết Nhận Xét Của Bạn
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonials Grid -->
+                <div class="row g-4" id="testimonialsGrid">
+                    <!-- Testimonial 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="testimonial-card h-100 p-4 rounded-4 bg-body border shadow-sm d-flex flex-column">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div class="stars-group text-warning small">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="badge bg-success-subtle text-success small"><i class="fa-solid fa-circle-check me-1"></i> Đã mua sách</span>
+                            </div>
+                            <p class="testimonial-text flex-grow-1 text-muted">
+                                "Cuốn sách công nghệ hiếm hoi tại Việt Nam được đầu tư công phu cả về nội dung chuyên môn lẫn chất lượng in ấn. Phần giải thích về Box Model và Bootstrap Grid cực kỳ dễ hiểu, giúp tôi tự tin vượt qua vòng phỏng vấn Frontend tại tập đoàn FPT!"
+                            </p>
+                            <div class="d-flex align-items-center gap-3 pt-3 border-top">
+                                <div class="reviewer-avatar-circle bg-primary-subtle text-primary fw-bold">
+                                    LH
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Lê Hoàng Long</h6>
+                                    <span class="small text-muted">Frontend Engineer tại FPT Software</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="testimonial-card h-100 p-4 rounded-4 bg-body border shadow-sm d-flex flex-column">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div class="stars-group text-warning small">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="badge bg-success-subtle text-success small"><i class="fa-solid fa-circle-check me-1"></i> Đã mua bản Boxset</span>
+                            </div>
+                            <p class="testimonial-text flex-grow-1 text-muted">
+                                "Tôi đánh giá rất cao cách tác giả truyền tải tư duy kiến trúc hệ thống giao diện. Không dạy học vẹt code, mà dạy tại sao phải làm như vậy. Đây là cuốn sách bắt buộc phải đọc đối với bất kỳ ai theo đuổi con đường Web Developer chuyên nghiệp."
+                            </p>
+                            <div class="d-flex align-items-center gap-3 pt-3 border-top">
+                                <div class="reviewer-avatar-circle bg-warning-subtle text-warning fw-bold">
+                                    TM
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Trần Minh Tuấn</h6>
+                                    <span class="small text-muted">CTO & Founder tại TechNext Startup</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="testimonial-card h-100 p-4 rounded-4 bg-body border shadow-sm d-flex flex-column">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div class="stars-group text-warning small">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="badge bg-success-subtle text-success small"><i class="fa-solid fa-circle-check me-1"></i> Đã mua sách</span>
+                            </div>
+                            <p class="testimonial-text flex-grow-1 text-muted">
+                                "Là một người chuyển ngành từ kinh tế sang IT, trước đây mình luôn sợ CSS và Bootstrap vì không hiểu cơ chế co giãn responsive. Sau khi đọc cuốn này và làm hết các bài lab, mình đã tự tay dựng được toàn bộ website bán hàng chuẩn đẹp!"
+                            </p>
+                            <div class="d-flex align-items-center gap-3 pt-3 border-top">
+                                <div class="reviewer-avatar-circle bg-success-subtle text-success fw-bold">
+                                    NH
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Nguyễn Thu Hà</h6>
+                                    <span class="small text-muted">Junior Web Developer • Cựu học viên CodeGym</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="testimonial-card h-100 p-4 rounded-4 bg-body border shadow-sm d-flex flex-column">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div class="stars-group text-warning small">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="badge bg-success-subtle text-success small"><i class="fa-solid fa-circle-check me-1"></i> Đã mua bản Paperback</span>
+                            </div>
+                            <p class="testimonial-text flex-grow-1 text-muted">
+                                "Sách in màu cực đẹp, giấy dày dặn thơm mùi sách mới. Kho Git đính kèm 50+ repo là kho báu thật sự, mình tận dụng được rất nhiều component tái sử dụng để làm dự án cho khách hàng freelance!"
+                            </p>
+                            <div class="d-flex align-items-center gap-3 pt-3 border-top">
+                                <div class="reviewer-avatar-circle bg-info-subtle text-info fw-bold">
+                                    DQ
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Đặng Quốc Dũng</h6>
+                                    <span class="small text-muted">Freelance Web Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="testimonial-card h-100 p-4 rounded-4 bg-body border shadow-sm d-flex flex-column">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div class="stars-group text-warning small">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="badge bg-success-subtle text-success small"><i class="fa-solid fa-circle-check me-1"></i> Đã mua sách</span>
+                            </div>
+                            <p class="testimonial-text flex-grow-1 text-muted">
+                                "Một cuốn sách mẫu mực cho các bạn sinh viên ngành Công nghệ thông tin. Các chương viết mạch lạc, hình minh họa rõ nét, phần bài tập có độ khó tăng dần giúp tư duy phát triển tự nhiên."
+                            </p>
+                            <div class="d-flex align-items-center gap-3 pt-3 border-top">
+                                <div class="reviewer-avatar-circle bg-danger-subtle text-danger fw-bold">
+                                    VH
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">TS. Vũ Đức Hùng</h6>
+                                    <span class="small text-muted">Giảng viên Khoa CNTT • Đại học Bách Khoa</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="testimonial-card h-100 p-4 rounded-4 bg-body border shadow-sm d-flex flex-column">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div class="stars-group text-warning small">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="badge bg-success-subtle text-success small"><i class="fa-solid fa-circle-check me-1"></i> Đã mua E-Book</span>
+                            </div>
+                            <p class="testimonial-text flex-grow-1 text-muted">
+                                "Gói E-book đọc trên iPad Pro nét căng từng dòng chữ. Tác giả còn thường xuyên gửi mail cập nhật các nội dung mới khi Bootstrap và trình duyệt ra bản cập nhật. Giá quá hời so với chất lượng!"
+                            </p>
+                            <div class="d-flex align-items-center gap-3 pt-3 border-top">
+                                <div class="reviewer-avatar-circle bg-secondary-subtle text-secondary fw-bold">
+                                    PT
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Phạm Thanh Tùng</h6>
+                                    <span class="small text-muted">Fullstack Developer tại VNG Corporation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================================
+         8. FOOTER
+         ======================================================== -->
+    <footer class="footer-section pt-5 pb-4 bg-dark text-white position-relative" id="footer">
+        <div class="container">
+            <div class="row gy-4 mb-5">
+                <!-- Col 1: Brand & Intro -->
+                <div class="col-lg-4 col-md-6">
+                    <a class="d-flex align-items-center gap-2 mb-3 text-white text-decoration-none" href="#overview">
+                        <div class="brand-icon-box">
+                            <i class="fa-solid fa-book-bookmark text-white"></i>
+                        </div>
+                        <div class="brand-text-group">
+                            <span class="brand-name text-white">Tech<span class="text-accent">Book</span></span>
+                            <span class="brand-tag text-white-50">Mastery Press</span>
+                        </div>
+                    </a>
+                    <p class="text-white-50 small mb-4">
+                        Cẩm nang thực chiến hàng đầu dành cho các lập trình viên hiện đại. Đồng hành cùng bạn trên con đường chinh phục kiến trúc web và nâng tầm tư duy phần mềm.
+                    </p>
+                    <div class="footer-contacts text-white-50 small">
+                        <div class="mb-2"><i class="fa-solid fa-location-dot me-2 text-primary"></i> 23 Lạc Trung, Hai Bà Trưng, Hà Nội (CodeGym Campus)</div>
+                        <div class="mb-2"><i class="fa-solid fa-phone me-2 text-primary"></i> Hotline hỗ trợ: <strong>1900 633 888</strong> (8:00 - 21:00)</div>
+                        <div><i class="fa-solid fa-envelope me-2 text-primary"></i> Email: <strong>sach@vinhdev.edu.vn</strong></div>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6 class="text-white fw-bold mb-3">Liên Kết Nhanh</h6>
+                    <ul class="list-unstyled footer-links small">
+                        <li class="mb-2"><a href="#overview"><i class="fa-solid fa-angle-right me-1 text-primary"></i> Giới thiệu tổng quan</a></li>
+                        <li class="mb-2"><a href="#author"><i class="fa-solid fa-angle-right me-1 text-primary"></i> Về tác giả</a></li>
+                        <li class="mb-2"><a href="#features"><i class="fa-solid fa-angle-right me-1 text-primary"></i> Điểm nổi bật</a></li>
+                        <li class="mb-2"><a href="#chapters"><i class="fa-solid fa-angle-right me-1 text-primary"></i> Mục lục 24 chương</a></li>
+                        <li class="mb-2"><a href="#prices"><i class="fa-solid fa-angle-right me-1 text-primary"></i> Bảng giá ấn bản</a></li>
+                        <li class="mb-2"><a href="#download"><i class="fa-solid fa-angle-right me-1 text-primary"></i> Tải bản đọc thử</a></li>
+                        <li><a href="#readers-say"><i class="fa-solid fa-angle-right me-1 text-primary"></i> Độc giả đánh giá</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Policies & Support -->
+                <div class="col-lg-3 col-md-6 col-6">
+                    <h6 class="text-white fw-bold mb-3">Chính Sách & Hỗ Trợ</h6>
+                    <ul class="list-unstyled footer-links small">
+                        <li class="mb-2"><a href="#" data-bs-toggle="modal" data-bs-target="#policyModal"><i class="fa-solid fa-angle-right me-1 text-primary"></i> Chính sách giao hàng Freeship</a></li>
+                        <li class="mb-2"><a href="#" data-bs-toggle="modal" data-bs-target="#policyModal"><i class="fa-solid fa-angle-right me-1 text-primary"></i> Đổi trả 1-1 trong 14 ngày</a></li>
+                        <li class="mb-2"><a href="#" data-bs-toggle="modal" data-bs-target="#policyModal"><i class="fa-solid fa-angle-right me-1 text-primary"></i> Hướng dẫn kích hoạt E-Book</a></li>
+                        <li class="mb-2"><a href="#" data-bs-toggle="modal" data-bs-target="#policyModal"><i class="fa-solid fa-angle-right me-1 text-primary"></i> Truy cập kho mã nguồn GitHub</a></li>
+                        <li class="mb-2"><a href="#" data-bs-toggle="modal" data-bs-target="#policyModal"><i class="fa-solid fa-angle-right me-1 text-primary"></i> Điều khoản dịch vụ & Bảo mật</a></li>
+                        <li><a href="#" data-bs-toggle="modal" data-bs-target="#policyModal"><i class="fa-solid fa-angle-right me-1 text-primary"></i> Liên hệ đặt mua số lượng lớn</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter & Social -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="text-white fw-bold mb-3">Bản Tin Công Nghệ</h6>
+                    <p class="text-white-50 small mb-3">
+                        Đăng ký nhận các bài viết phân tích chuyên sâu về Frontend, mẹo CSS và mã nguồn mẫu miễn phí mỗi thứ Hai hàng tuần.
+                    </p>
+                    <form id="newsletterForm" class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control form-control-sm" id="newsletterEmail" placeholder="Nhập email của bạn..." required>
+                            <button class="btn btn-primary btn-sm" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                    <div class="social-links-footer d-flex gap-2">
+                        <a href="https://github.com" target="_blank" class="footer-social-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://facebook.com" target="_blank" class="footer-social-icon" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://youtube.com" target="_blank" class="footer-social-icon" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="footer-social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://discord.com" target="_blank" class="footer-social-icon" title="Discord"><i class="fa-brands fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="border-top border-secondary pt-4 text-center text-white-50 small d-flex flex-wrap justify-content-between align-items-center gap-2">
+                <div>
+                    © 2026 <strong>TechMastery Press</strong> & <strong>Thào Quang Vinh</strong>. Bảo lưu toàn bộ bản quyền. Phát triển cho đồ án CodeGym.
+                </div>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-white-50 text-decoration-none">Chính sách bảo mật</a>
+                    <span>•</span>
+                    <a href="#" class="text-white-50 text-decoration-none">Điều khoản sử dụng</a>
+                    <span>•</span>
+                    <a href="../../index.html" class="text-accent text-decoration-none fw-semibold"><i class="fa-solid fa-arrow-left me-1"></i> Về Portfolio Hub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================================
+         MODALS & INTERACTIVE POPUPS
+         ======================================================== -->
+
+    <!-- 1. ORDER CHECKOUT MODAL (ĐẶT MUA SÁCH) -->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-4 border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white rounded-top-4 p-4">
+                    <div>
+                        <h5 class="modal-title fw-bold" id="orderModalLabel"><i class="fa-solid fa-bag-shopping me-2"></i> Đặt Mua Cuốn Sách: Kiến Trúc Web Hiện Đại</h5>
+                        <p class="modal-sub mb-0 text-white-50 small">Điền thông tin giao hàng — Nhận ưu đãi giảm giá đến 30% và Freeship toàn quốc</p>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="orderForm" novalidate>
+                        <div class="row g-3">
+                            <!-- Select Edition -->
+                            <div class="col-12">
+                                <label class="form-label fw-bold">Chọn phiên bản bạn muốn sở hữu: <span class="text-danger">*</span></label>
+                                <div class="row g-2">
+                                    <div class="col-md-4">
+                                        <div class="edition-selector-card p-3 rounded-3 border text-center cursor-pointer" data-edition="ebook" data-price="199000">
+                                            <input class="form-check-input d-none" type="radio" name="orderEdition" id="orderEbook" value="ebook">
+                                            <label class="form-check-label w-100 cursor-pointer" for="orderEbook">
+                                                <div class="fw-bold">E-Book Bản Số</div>
+                                                <div class="text-primary fw-bold">199.000đ</div>
+                                                <small class="text-muted">PDF + EPUB</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="edition-selector-card p-3 rounded-3 border text-center cursor-pointer active" data-edition="paperback" data-price="349000">
+                                            <input class="form-check-input d-none" type="radio" name="orderEdition" id="orderPaperback" value="paperback" checked>
+                                            <label class="form-check-label w-100 cursor-pointer" for="orderPaperback">
+                                                <span class="badge bg-danger small mb-1">Bán Chạy Nhất</span>
+                                                <div class="fw-bold">Bìa Mềm (In Màu)</div>
+                                                <div class="text-primary fw-bold">349.000đ</div>
+                                                <small class="text-muted">+ Tặng kèm E-Book</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="edition-selector-card p-3 rounded-3 border text-center cursor-pointer" data-edition="hardcover" data-price="599000">
+                                            <input class="form-check-input d-none" type="radio" name="orderEdition" id="orderHardcover" value="hardcover">
+                                            <label class="form-check-label w-100 cursor-pointer" for="orderHardcover">
+                                                <div class="fw-bold">Bìa Cứng VIP Box</div>
+                                                <div class="text-primary fw-bold">599.000đ</div>
+                                                <small class="text-muted">Kèm Áo + Vé Workshop</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Customer Name & Phone -->
+                            <div class="col-md-6">
+                                <label for="orderName" class="form-label fw-semibold">Họ và tên người nhận <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="orderName" placeholder="Ví dụ: Nguyễn Văn A" required>
+                                <div class="invalid-feedback">Vui lòng nhập họ và tên.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="orderPhone" class="form-label fw-semibold">Số điện thoại <span class="text-danger">*</span></label>
+                                <input type="tel" class="form-control" id="orderPhone" placeholder="0912 345 678" pattern="[0-9]{10,11}" required>
+                                <div class="invalid-feedback">Vui lòng nhập số điện thoại hợp lệ (10-11 số).</div>
+                            </div>
+
+                            <!-- Email & Address -->
+                            <div class="col-md-6">
+                                <label for="orderEmail" class="form-label fw-semibold">Email nhận hóa đơn & E-Book <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="orderEmail" placeholder="email@example.com" required>
+                                <div class="invalid-feedback">Vui lòng nhập email hợp lệ.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="orderQuantity" class="form-label fw-semibold">Số lượng cuốn:</label>
+                                <div class="input-group">
+                                    <button class="btn btn-outline-secondary" type="button" id="btnQtyMinus">-</button>
+                                    <input type="number" class="form-control text-center" id="orderQuantity" value="1" min="1" max="50">
+                                    <button class="btn btn-outline-secondary" type="button" id="btnQtyPlus">+</button>
+                                </div>
+                            </div>
+
+                            <!-- Shipping Address -->
+                            <div class="col-12" id="shippingAddressRow">
+                                <label for="orderAddress" class="form-label fw-semibold">Địa chỉ giao sách tận nơi (Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành) <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="orderAddress" rows="2" placeholder="Ví dụ: Số 12 ngõ 45 đường Cầu Giấy, Hà Nội" required></textarea>
+                                <div class="invalid-feedback">Vui lòng nhập địa chỉ nhận hàng.</div>
+                            </div>
+
+                            <!-- Promo Voucher -->
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Mã giảm giá (Coupon):</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control text-uppercase" id="orderPromoCode" placeholder="Nhập mã CODEGYM2026">
+                                    <button class="btn btn-outline-primary" type="button" id="btnApplyPromo">Áp Dụng</button>
+                                </div>
+                                <div id="promoFeedback" class="small mt-1 text-success d-none">
+                                    <i class="fa-solid fa-tag me-1"></i> Áp dụng thành công mã <strong>CODEGYM2026</strong> (-15%)!
+                                </div>
+                            </div>
+
+                            <!-- Payment Method -->
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Hình thức thanh toán:</label>
+                                <div class="d-flex flex-column flex-sm-row gap-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="payCod" value="cod" checked>
+                                        <label class="form-check-label" for="payCod">
+                                            <i class="fa-solid fa-truck-fast text-success me-1"></i> Thanh toán khi nhận hàng (COD)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="payBank" value="bank">
+                                        <label class="form-check-label" for="payBank">
+                                            <i class="fa-solid fa-building-columns text-primary me-1"></i> Chuyển khoản VietQR tức thì (-5.000đ)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Order Summary Box -->
+                            <div class="col-12">
+                                <div class="order-summary-box p-3 rounded-3 bg-light border">
+                                    <div class="d-flex justify-content-between mb-1 small">
+                                        <span class="text-muted">Tạm tính:</span>
+                                        <span id="summarySubtotal" class="fw-semibold">349.000đ</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-1 small">
+                                        <span class="text-muted">Phí giao hàng toàn quốc:</span>
+                                        <span class="text-success fw-semibold">0đ (Freeship)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-1 small d-none" id="summaryDiscountRow">
+                                        <span class="text-muted">Giảm giá voucher:</span>
+                                        <span id="summaryDiscount" class="text-danger fw-semibold">-52.350đ</span>
+                                    </div>
+                                    <hr class="my-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold">Tổng thanh toán:</span>
+                                        <span id="summaryTotal" class="fs-4 fw-bolder text-primary">349.000đ</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary-gradient w-100 py-3 fw-bold fs-5 shadow-glow" id="btnSubmitOrder">
+                                    <i class="fa-solid fa-shield-check me-2"></i> Xác Nhận Đặt Hàng Ngay
+                                </button>
+                                <p class="text-center text-muted small mt-2 mb-0">
+                                    <i class="fa-solid fa-lock text-success me-1"></i> Thông tin của bạn được mã hóa an toàn 256-bit SSL.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Order Completed Message -->
+                    <div class="order-completed-view d-none text-center py-4" id="orderCompletedView">
+                        <div class="success-icon-animated mb-3 text-success">
+                            <i class="fa-solid fa-circle-check fa-4x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-2">Đặt Hàng Thành Công!</h4>
+                        <p class="text-muted mb-4">Cảm ơn bạn đã lựa chọn cuốn sách <strong>Kiến Trúc Web Hiện Đại</strong>. Mã đơn hàng của bạn là <strong id="orderIdDisplay" class="text-primary">#TB-2026-9842</strong>. Bộ phận CSKH sẽ liên hệ xác nhận và gửi email chi tiết cho bạn ngay.</p>
+                        <button type="button" class="btn btn-outline-primary px-4 py-2" data-bs-dismiss="modal">Đóng cửa sổ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. MINI SAMPLE PREVIEW MODAL (XEM TRƯỚC SÁCH) -->
+    <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content rounded-4 border-0 shadow-lg">
+                <div class="modal-header bg-dark text-white p-3 px-4">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-book-open text-primary fs-5"></i>
+                        <h5 class="modal-title fw-bold mb-0" id="previewModalLabel">Trích Đoạn Đọc Thử: Chương 1 — Bí Mật Của Trình Duyệt</h5>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 preview-book-reader">
+                    <div class="reader-chapter-title mb-3">
+                        <span class="badge bg-primary text-white">Chương 1</span>
+                        <h3 class="fw-bold mt-2">Bức Tranh Toàn Cảnh: Trình Duyệt Render Giao Diện Như Thế Nào?</h3>
+                        <p class="text-muted small fst-italic">Trích đoạn từ trang 14 đến 28 của cuốn sách "Kiến Trúc Web Hiện Đại"</p>
+                    </div>
+
+                    <div class="reader-content text-body">
+                        <p>
+                            Khi một người dùng gõ địa chỉ <code>https://codegym.vn</code> vào thanh địa chỉ và nhấn Enter, đằng sau màn hình diễn ra một chuỗi sự kiện kỳ diệu với tốc độ tính bằng mili-giây. Để trở thành một Web Developer xuất chúng, bạn không thể coi trình duyệt là một "chiếc hộp đen" thần kỳ...
+                        </p>
+
+                        <div class="p-3 my-3 rounded-3 bg-body-tertiary border-start border-4 border-primary">
+                            <h6 class="fw-bold mb-1"><i class="fa-solid fa-lightbulb text-warning me-2"></i>Quy tắc then chốt của DOM & CSSOM:</h6>
+                            <p class="mb-0 small">
+                                "HTML biến đổi thành DOM Tree (cây cấu trúc), CSS biến đổi thành CSSOM Tree (cây kiểu dáng). Trình duyệt kết hợp hai cây này lại để tạo nên <strong>Render Tree</strong> — chỉ những gì thực sự hiển thị trên màn hình mới được đưa vào đây."
+                            </p>
+                        </div>
+
+                        <p>
+                            Hãy tưởng tượng bạn có một thẻ <code>&lt;div style="display: none;"&gt;</code>. Thẻ này vẫn nằm trong DOM Tree, nhưng nó hoàn toàn <strong>bị loại bỏ khỏi Render Tree</strong>. Ngược lại, nếu bạn dùng <code>visibility: hidden</code>, phần tử vẫn chiếm diện tích trên Render Tree nhưng chỉ có độ trong suốt bị ẩn...
+                        </p>
+
+                        <h5 class="fw-bold mt-4 mb-2"><i class="fa-solid fa-terminal text-primary me-2"></i>Ví Dụ Thực Hành Trong Sách:</h5>
+                        <pre class="bg-dark text-light p-3 rounded-3 small"><code>// Thử nghiệm đo lường thời gian Render trong DevTools Console:
+console.time('DOM-Parse-Time');
+document.addEventListener('DOMContentLoaded', () => {
+    console.timeEnd('DOM-Parse-Time');
+    console.log('DOM đã sẵn sàng — Giao diện bắt đầu vẽ!');
+});</code></pre>
+
+                        <div class="alert alert-info mt-4 d-flex align-items-center gap-3">
+                            <i class="fa-solid fa-circle-info fs-3"></i>
+                            <div>
+                                <strong>Bạn muốn đọc tiếp 23 chương còn lại?</strong><br>
+                                Hãy tải ngay bản PDF đầy đủ 3 chương đầu hoặc đặt mua sách để sở hữu trọn bộ tác phẩm!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer p-3 bg-light d-flex justify-content-between">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <div class="d-flex gap-2">
+                        <a href="#download" class="btn btn-outline-primary" data-bs-dismiss="modal"><i class="fa-solid fa-download me-1"></i> Tải Full 120 Trang</a>
+                        <button class="btn btn-primary-gradient" data-bs-toggle="modal" data-bs-target="#orderModal" data-edition="paperback"><i class="fa-solid fa-cart-shopping me-1"></i> Mua Sách Giấy Ngay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. SUBMIT REVIEW MODAL (GỬI ĐÁNH GIÁ ĐỘC GIẢ) -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white p-3 px-4">
+                    <h5 class="modal-title fw-bold" id="reviewModalLabel"><i class="fa-solid fa-star me-2"></i> Gửi Đánh Giá Của Bạn</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="reviewForm" novalidate>
+                        <div class="mb-3 text-center">
+                            <label class="form-label fw-semibold d-block">Mức độ hài lòng của bạn:</label>
+                            <div class="rating-stars-input fs-3 text-warning cursor-pointer" id="ratingInputStars">
+                                <i class="fa-solid fa-star star-rate" data-val="1"></i>
+                                <i class="fa-solid fa-star star-rate" data-val="2"></i>
+                                <i class="fa-solid fa-star star-rate" data-val="3"></i>
+                                <i class="fa-solid fa-star star-rate" data-val="4"></i>
+                                <i class="fa-solid fa-star star-rate" data-val="5"></i>
+                            </div>
+                            <input type="hidden" id="reviewRatingVal" value="5">
+                            <small class="text-muted" id="ratingTextDesc">Rất xuất sắc (5/5 sao)</small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="reviewAuthorName" class="form-label fw-semibold">Họ và tên của bạn <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="reviewAuthorName" placeholder="Ví dụ: Hoàng Tuấn" required>
+                            <div class="invalid-feedback">Vui lòng nhập tên.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="reviewAuthorRole" class="form-label fw-semibold">Nghề nghiệp / Công ty</label>
+                            <input type="text" class="form-control" id="reviewAuthorRole" placeholder="Ví dụ: Sinh viên CNTT / Junior Developer">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="reviewContent" class="form-label fw-semibold">Cảm nhận chi tiết của bạn về cuốn sách <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="reviewContent" rows="4" placeholder="Chia sẻ cảm nhận của bạn sau khi đọc sách hoặc áp dụng mã nguồn..." required></textarea>
+                            <div class="invalid-feedback">Vui lòng nhập nội dung nhận xét.</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary-gradient w-100 py-2 fw-bold" id="btnSubmitReview">
+                            <i class="fa-solid fa-paper-plane me-1"></i> Gửi Đánh Giá Ngay
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. POLICY MODAL (CHÍNH SÁCH) -->
+    <div class="modal fade" id="policyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold"><i class="fa-solid fa-shield-halved text-primary me-2"></i> Chính Sách Độc Giả TechBook</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body small text-muted">
+                    <h6 class="fw-bold text-dark">1. Chính Sách Giao Hàng & Freeship:</h6>
+                    <p>Toàn bộ đơn hàng sách giấy (Bìa mềm và Bìa cứng) đều được miễn phí giao hàng toàn quốc qua ViettelPost / GiaoHangNhanh. Thời gian nhận hàng từ 1-2 ngày đối với Hà Nội & TP.HCM, và 2-4 ngày đối với các tỉnh thành khác.</p>
+                    <h6 class="fw-bold text-dark">2. Đổi Trả 1-1 Miễn Phí:</h6>
+                    <p>Nếu sách bị rách trang, lỗi in ấn, nhòe mực hoặc hư hỏng trong quá trình vận chuyển, quý khách được đổi cuốn mới 100% miễn phí tận nhà.</p>
+                    <h6 class="fw-bold text-dark">3. Hỗ Trợ Độc Quyền:</h6>
+                    <p>Email hỗ trợ thắc mắc kỹ thuật: sach@vinhdev.edu.vn hoặc tham gia nhóm hỗ trợ độc giả được ghi ở trang cuối cuốn sách.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Đã hiểu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOCIAL PROOF POPUP TOAST (THÔNG BÁO NGƯỜI MUA SÁCH REALTIME) -->
+    <div class="toast-container position-fixed bottom-0 start-0 p-3" style="z-index: 1090;">
+        <div id="liveOrderToast" class="toast align-items-center bg-body border shadow-lg rounded-4" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex p-2">
+                <div class="toast-avatar me-2 flex-shrink-0">
+                    <div class="avatar-sm rounded-circle bg-success text-white d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                </div>
+                <div class="toast-body p-0 flex-grow-1">
+                    <div class="small fw-bold text-body" id="toastCustomerName">Minh Đức (Hà Nội)</div>
+                    <div class="small text-muted" id="toastBookAction">vừa đặt mua cuốn <strong>Paperback Deluxe</strong></div>
+                    <div class="smaller text-success" id="toastTimeAgo"><i class="fa-solid fa-bolt me-1"></i> Cách đây 2 phút</div>
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button class="back-to-top-btn" id="backToTopBtn" title="Về đầu trang" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap 5.3.3 Bundle JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Custom Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>
